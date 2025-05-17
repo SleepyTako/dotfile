@@ -38,7 +38,7 @@
       "on-click": "pavucontrol"
   },
   "cava": {
-        "cava_config": "/home/Squeaks/.config/cava/config",
+        "cava_config": "~/.config/cava/config",
         "framerate": 30,
         "autosens": 1,
         "sensitivity": 100,
