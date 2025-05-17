@@ -60,18 +60,17 @@
                    }
   },
   "mpris": {
- 	  "format": " {status_icon} {dynamic}",
-    "interval": 1,
-    "dynamic-len": 40,
-	  "status-icons": {
+	"format": " {status_icon} {dynamic}",
+	"interval": 1,
+	"dynamic-len": 40,
+	status-icons": {
 		        "playing": "▶",
 		        "paused": "⏸",
 		        "stopped": ""
 	  },
-	  "dynamic-order": ["title", "artist"],
-	  "ignored-players": ["firefox"]
-    "on-click": "swayimg $(playerctl metadata mpris:artUrl)"
-
+	"dynamic-order": ["title", "artist"],
+	"ignored-players": ["firefox"]
+	"on-click": "swayimg $(playerctl metadata mpris:artUrl)"
   }
 
 }
