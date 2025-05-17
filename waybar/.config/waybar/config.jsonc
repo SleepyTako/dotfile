@@ -1,6 +1,6 @@
 {
   "position": "top",
-  "modules-left": ["hyprland/window", "cava"],
+  "modules-left": ["hyprland/window", "cava", "mpris"],
   "modules-center": ["hyprland/workspaces"],
   "modules-right": ["network", "pulseaudio", "battery", "clock"],
   "clock": {
@@ -58,5 +58,18 @@
         "actions": {
                    "on-click-right": "mode"
                    }
-    }
+  },
+  "mpris": {
+ 	  "format": " {status_icon} {dynamic}",
+    "interval": 1,
+    "dynamic-len": 40,
+	  "status-icons": {
+		        "playing": "▶",
+		        "paused": "⏸",
+		        "stopped": ""
+	  },
+	  "dynamic-order": ["title", "artist"],
+	  "ignored-players": ["firefox"]
+  }
+
 }
