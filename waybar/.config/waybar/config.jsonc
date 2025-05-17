@@ -69,9 +69,7 @@
 		"stopped": ""
 	  },
 	"dynamic-order": ["title", "artist"],
-	"ignored-players": ["firefox"],
-	"on-click": "swayimg $(playerctl metadata mpris:artUrl)"
-		   
+	"ignored-players": ["firefox"]		   
   }
 
 }
