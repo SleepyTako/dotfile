@@ -38,7 +38,7 @@
       "on-click": "pavucontrol"
   },
   "cava": {
-//        "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
+        "cava_config": "~/.config/cava/cava.conf",
         "framerate": 30,
         "autosens": 1,
         "sensitivity": 100,
