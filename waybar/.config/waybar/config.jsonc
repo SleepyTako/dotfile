@@ -29,6 +29,7 @@
         "clock",
         "tray",
         "custom/power"
+	"cava"
     ],
     // Modules configuration
      "hyprland/workspaces": {
