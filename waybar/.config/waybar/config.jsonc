@@ -70,9 +70,8 @@
 	  },
 	"dynamic-order": ["title", "artist"],
 	"ignored-players": ["firefox"],
-	"actions": {
-		   "on-click": "swayimg $(playerctl metadata mpris:artUrl)"
-		   }
+	"on-click": "swayimg $(playerctl metadata mpris:artUrl)"
+		   
   }
 
 }
