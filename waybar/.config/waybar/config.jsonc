@@ -1,7 +1,7 @@
 {
   "position": "top",
-  "modules-left": ["hyprland/workspaces", "cava"],
-  "modules-center": ["hyprland/window"],
+  "modules-left": ["hyprland/window", "cava"],
+  "modules-center": ["hyprland/workspaces"],
   "modules-right": ["network", "pulseaudio", "battery", "clock"],
   "clock": {
     "format": "<span foreground='#f5c2e7'>   </span>{:%a %d %H:%M}",
