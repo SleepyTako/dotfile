@@ -124,7 +124,6 @@
 ------------------------------------------------------------*/
 #waybar #workspaces button.active { color: @accent-coral; }
 #waybar #workspaces button.urgent { color: @critical; }
-#waybar #workspaces button.visible { color: @accent-magenta; }
 #waybar #clock { color: @accent-coral; }
 #waybar #pulseaudio { color: @info; }
 #waybar #backlight { color: @accent-orange; }
