@@ -127,6 +127,7 @@
 #waybar #workspaces button.active { color: @pacman; }
 #waybar #workspaces button.urgent { color: @cherry; }
 #waybar #clock { color: @success; }
+#waybar #cava { color: @success; }
 #waybar #pulseaudio { color: @success; }
 #waybar #backlight { color: @success; }
 #waybar #cpu { color: @success; }
