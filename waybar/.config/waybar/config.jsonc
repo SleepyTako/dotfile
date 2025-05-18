@@ -148,8 +148,10 @@
     "max-length": 10
   },
   "disk": {"interval": 30, "format": "  {percentage_used}%", "path": "/"},
-  "temperature": {"format": " {}°C",
+  "temperature": {"format": " {temperatureC}°C",
     "paths": ["/sys/class/thermal/thermal_zone0/temp"], 
+    "critical-threshold": 60,
+    "format-critical":"󰈸 {temperatureC}°C",
     "interval": 30
   },
   "battery": {
