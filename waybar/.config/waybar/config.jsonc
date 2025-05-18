@@ -32,7 +32,7 @@
   // General: Clock, Tray
   //========================================
   "clock": {
-    "format": "<span foreground='#f5c2e7'>   </span>{:%A - %B %d, %Y - %H:%M:%S}",
+    "format": "<span foreground='#f5c2e7'>   </span>{:%A - %B %d, %Y - %H:%M:%S}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
 
