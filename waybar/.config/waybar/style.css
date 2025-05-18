@@ -2,6 +2,33 @@
 
 @import "colors.css";
 
+/*------------------------------------------------------------
+ Group containers (left, center, right)
+------------------------------------------------------------*/
+window#waybar .modules-left,
+window#waybar .modules-center,
+window#waybar .modules-right {
+    background: @surface1;
+    border-radius: 8px;
+    padding: 4px 8px;
+    margin: 0 6px;
+}
+
+/* Highlight workspace group */
+window#waybar .modules-center {
+    background: @accent-magenta;
+}
+
+/* Normalize margins inside groups */
+window#waybar .modules-left > widget > *,
+window#waybar .modules-center > widget > *,
+window#waybar .modules-right > widget > * {
+    margin: 0 6px;
+}
+
+/*------------------------------------------------------------
+ Global Styles
+------------------------------------------------------------*/
 * {
     border: none;
     font-family: "JetbrainsMono Nerd Font";
@@ -12,12 +39,6 @@
 window#waybar {
     background: transparent;
     transition-duration: 0.1s;
-}
-
-#window {
-    margin: 8px;
-    padding-left: 8;
-    padding-right: 8;
 }
 
 button {
@@ -32,27 +53,30 @@ button:hover {
     border-top: 2px solid @accent-magenta;
 }
 
+/*------------------------------------------------------------
+ Workspaces
+------------------------------------------------------------*/
 #workspaces button {
     padding: 0 4px;
+    background-color: transparent;
+    color: @foreground;
 }
-
+#workspaces button.persistent,
 #workspaces button.focused {
-    background-color: rgba(0, 0, 0, 0.3);
     color: @accent-magenta;
     border-top: 2px solid @accent-magenta;
 }
-
 #workspaces button.active {
-    background-color: rgba(0, 0, 0, 0.3);
-    color: @accent-magenta;
-    border-top: 2px solid @accent-magenta;
+    color: @accent-teal;
+    border-top: 2px solid @accent-teal;
 }
-
 #workspaces button.urgent {
     background-color: @critical;
 }
 
-/* Module Sizing */
+/*------------------------------------------------------------
+ Module sizing & defaults
+------------------------------------------------------------*/
 #pulseaudio,
 #cava,
 #mpris,
@@ -68,22 +92,20 @@ button:hover {
 #network,
 #mode,
 #scratchpad {
-  margin: 2px 4px;
-  padding: 0 4px;
+  margin: 2px 6px;
+  padding: 0 6px;
   border-bottom: 3px solid @border;
   border-radius: 5px;
   color: @foreground;
   background: @background;
 }
 
+/*------------------------------------------------------------
+ Individual Module Styles
+------------------------------------------------------------*/
 #clock {
     color: @accent-coral;
     border-bottom-color: @accent-coral;
-}
-
-#clock.date {
-    color: @accent-magenta;
-    border-bottom-color: @accent-magenta;
 }
 
 #pulseaudio {
@@ -91,18 +113,28 @@ button:hover {
     border-bottom-color: @info;
 }
 
-#network {
+#backlight {
+    color: @accent-orange;
+}
+
+#cpu {
+    color: @critical;
+    border-bottom-color: @critical;
+}
+
+#memory {
+    color: @accent-magenta;
+    border-bottom-color: @accent-magenta;
+}
+
+#disk {
     color: @accent-yellow;
     border-bottom-color: @accent-yellow;
 }
 
-#idle_inhibitor {
-    margin-right: 12px;
-    color: @success;
-}
-
-#idle_inhibitor.activated {
-    color: @critical;
+#temperature {
+    color: @info;
+    border-bottom-color: @info;
 }
 
 #battery {
@@ -110,36 +142,32 @@ button:hover {
     border-bottom-color: @success;
     border-radius: 0 10px 10px 0;
 }
-
 #battery.warning {
-    color: @accent-yellow;
-    border-bottom-color: @accent-yellow;
+    color: @warning;
+    border-bottom-color: @warning;
 }
-
 #battery.critical {
     color: @critical;
     border-bottom-color: @critical;
 }
 
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left>widget:first-child>#workspaces {
-    margin-left: 0;
+#network {
+    color: @accent-yellow;
+    border-bottom-color: @accent-yellow;
 }
 
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right>widget:last-child>#workspaces {
-    margin-right: 0;
+#bluetooth {
+    color: @info;
+}
+#bluetooth.connected {
+    color: @success;
+}
+#bluetooth.disconnected {
+    color: @critical;
 }
 
-#custom-vpn {
-    color: @accent-blue;
-    border-radius: 15px;
-    padding: 0 6px;
-}
-
-#cava {
-    font-size: 14px;
-    transition: 0.3s;
+#custom/shutdown {
+    color: @critical;
 }
 
 #cava:hover {
