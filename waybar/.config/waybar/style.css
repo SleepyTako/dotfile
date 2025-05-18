@@ -112,7 +112,7 @@
 /*------------------------------------------------------------
  Individual module styles
 ------------------------------------------------------------*/
-#waybar #workspaces { color: @accent-coral; }#waybar #clock { color: @accent-coral; }
+#waybar #clock { color: @accent-coral; }
 #waybar #pulseaudio { color: @info; }
 #waybar #backlight { color: @accent-orange; }
 #waybar #cpu { color: @critical; }
