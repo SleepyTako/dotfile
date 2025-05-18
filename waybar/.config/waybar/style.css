@@ -176,15 +176,77 @@ button:hover {
     border-color: @accent-coral;
 }
 
+
 /*------------------------------------------------------------
- Group containers (left, center, right)
+ Module grouping overrides
 ------------------------------------------------------------*/
+
+/* General Group: Clock, Weather, Tray */
+#clock {
+    border-radius: 10px 0 0 10px;
+    margin-left: 8px;
+    margin-right: 0;
+}
+#tray {
+    border-radius: 0 10px 10px 0;
+    margin-left: 0;
+    margin-right: 16px;
+}
+
+/* Workspace Group sits in its own container, no intra-group spacing needed */
+#workspaces {
+    margin: 0 16px;
+}
+
+/* Audio Group: Cava, Pulseaudio, backlight */
+#cava {
+    border-radius: 10px 0 0 10px;
+    margin-left: 16px;
+    margin-right: 0;
+}
+#pulseaudio {
+    border-radius: 0;
+    margin: 0;
+}
+#backlight {
+    border-radius: 0 10px 10px 0;
+    margin-left: 0;
+    margin-right: 16px;
+}
+
+/* Hardware Group: CPU, Memory, Disk, Temperature, Battery, Network, Bluetooth */
+#cpu {
+    border-radius: 10px 0 0 10px;
+    margin-left: 16px;
+    margin-right: 0;
+}
+#memory,
+#disk,
+#temperature,
+#battery,
+#network {
+    border-radius: 0;
+    margin: 0;
+}
+#bluetooth {
+    border-radius: 0 10px 10px 0;
+    margin-left: 0;
+    margin-right: 16px;
+}
+
+/* Power Group: Shutdown */
+#custom\/shutdown {
+    border-radius: 10px;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
 window#waybar .modules-left > widget > *,
 window#waybar .modules-center > widget > *,
 window#waybar .modules-right > widget > * {
     margin: 0;
 }
-
+}
 
 /*------------------------------------------------------------
  Module grouping overrides
@@ -242,3 +304,5 @@ window#waybar .modules-right > widget > * {
     border-radius: 10px;
     margin: 0 8px;
 }
+
+
