@@ -164,7 +164,7 @@
     "format-alt": "{icon} {time}",
     "format-full": "  {capacity}%",
     "format-icons": ["","","","",""],
-    "tooltip-format": "{time}"
+    "tooltip-format": "{time}",
     "max-length": 25
   },
   "network": {
