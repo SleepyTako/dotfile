@@ -210,7 +210,7 @@
     "dynamic-len": 40,
     "status-icons": {
       "playing": " ⏸",
-      "paused": " ▶",
+      "paused": "  ▶",
       "stopped": ""
       },
     "ignored-players": [
