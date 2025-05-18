@@ -1,6 +1,6 @@
 /* ~/.config/waybar/colors.css */
 
-@define-colors {
+@define-color {
   /* — Base layers (dark “canvas” for your bar) — */
   background:      #1B1F32;    /* very dark blue‑purple */
   background-alt:  #2D3050;    /* mid‑dark slate */
