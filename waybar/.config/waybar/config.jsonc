@@ -14,7 +14,7 @@
     "hyprland/workspaces"
   ],
   "modules-right": [
-    "mpris"
+    "mpris",
     "cava",
     "pulseaudio",
     "backlight",
