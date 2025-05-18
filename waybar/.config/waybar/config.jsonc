@@ -161,7 +161,7 @@
     "format-warning": "{icon}   {capacity}%",
     "format-critical": "{icon}   {capacity}%",
     "format-charging": "   {capacity}%",
-    "format-alt": "{icon}  {time}",
+    "format-alt": "{icon}   {time}",
     "format-full": "   {capacity}%",
     "format-icons": ["","","","",""],
     "tooltip-format": "{time}",
