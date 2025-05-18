@@ -176,3 +176,74 @@ button:hover {
     border-color: @accent-coral;
 }
 
+/* ~/.config/waybar/style.css */
+
+@import "colors.css";
+
+/*------------------------------------------------------------
+ Group containers (left, center, right)
+------------------------------------------------------------*/
+window#waybar .modules-left > widget > *,
+window#waybar .modules-center > widget > *,
+window#waybar .modules-right > widget > * {
+    margin: 0;
+}
+}
+
+/*------------------------------------------------------------
+ Module grouping overrides
+------------------------------------------------------------*/
+/* General Group: Clock, Weather, Tray */
+#clock {
+    border-radius: 10px 0 0 10px;
+    margin-left: 8px;
+    margin-right: 0;
+}
+#tray {
+    border-radius: 0 10px 10px 0;
+    margin-right: 8px;
+    margin-left: 0;
+}
+
+/* Audio Group: Cava, Pulseaudio, Backlight */
+#cava {
+    border-radius: 10px 0 0 10px;
+    margin-left: 8px;
+    margin-right: 0;
+}
+#pulseaudio {
+    border-radius: 0;
+    margin: 0;
+}
+#backlight {
+    border-radius: 0 10px 10px 0;
+    margin-right: 8px;
+    margin-left: 0;
+}
+
+/* Hardware Group: CPU, Memory, Disk, Temperature, Battery, Network, Bluetooth */
+#cpu {
+    border-radius: 10px 0 0 10px;
+    margin-left: 8px;
+    margin-right: 0;
+}
+#memory,
+#disk,
+#temperature,
+#battery,
+#network {
+    border-radius: 0;
+    margin: 0;
+}
+#bluetooth {
+    border-radius: 0 10px 10px 0;
+    margin-right: 8px;
+    margin-left: 0;
+}
+
+/* Power Group: Shutdown */
+#custom\/shutdown {
+    border-radius: 10px;
+    margin: 0 8px;
+}
+
