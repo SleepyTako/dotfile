@@ -6,25 +6,25 @@
   // Module Positioning
   //========================================
   "modules-left": [
-    "hyprland/workspaces",
+    "clock",
+    "weather"
+    "tray"
+  ],
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+  "modules-right": [
+    "cava",
+    "pulseaudio",
+    "backlight",
+    "mpris",
     "cpu",
     "memory",
     "disk",
     "temperature",
     "battery",
     "network",
-    "bluetooth"
-  ],
-  "modules-center": [
-    "clock",
-    "weather"
-  ],
-  "modules-right": [
-    "tray",
-    "cava",
-    "pulseaudio",
-    "backlight",
-    "mpris",
+    "bluetooth",
     "custom/shutdown"
   ],
 
