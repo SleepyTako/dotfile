@@ -55,7 +55,7 @@
 #waybar #backlight,
 #waybar #network,
 #waybar #bluetooth,
-#waybar #custom/shutdown {
+#waybar #custom-shutdown {
   padding: 0 6px;
   border-bottom: 3px solid @border;
   color: @foreground;
@@ -113,7 +113,7 @@
 }
 
 /* Power Group: Shutdown */
-#waybar .modules-right > widget > #custom/shutdown {
+#waybar .modules-right > widget > #custom-shutdown {
     border-radius: 15px;
     margin-left: 4px;
     margin-right: 0px;
@@ -154,4 +154,4 @@
 #waybar #bluetooth.off { color: @critical; }
 
 /* Power Group: Shutdown */
-#waybar #custom/shutdown { color: @critical; }
+#waybar #custom-shutdown { color: @critical; }
