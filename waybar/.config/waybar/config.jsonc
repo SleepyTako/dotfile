@@ -7,7 +7,7 @@
   //========================================
   "modules-left": [
     "clock",
-    "weather"
+    "weather",
     "tray"
   ],
   "modules-center": [
