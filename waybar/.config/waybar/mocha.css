@@ -24,9 +24,9 @@
 @define-color base #1e1e2e;
 @define-color mantle #181825;
 @define-color crust #11111b;
-@define-color background #05534d;
 @define-color text #b3e7e0;
+@define-color background #022523;
 @define-color border #16d4b5;
-@define-color backgroundhov #EF3946;
 @define-color texthov #32111C;
+@define-color backgroundhov #EF3946;
 @define-color borderhov #EF3946;
