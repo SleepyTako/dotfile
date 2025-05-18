@@ -2,25 +2,25 @@
 
 @define-color {
       /* — Base layers (dark “canvas” for your bar) — */
-  background:      #1B1F32;    /* very dark blue‑purple */
-  background-alt:  #2D3050;    /* mid‑dark slate */
-  surface0:        #3D3F63;    /* muted indigo */
-  surface1:        #505179;    /* softer violet */
-  surface2:        #666689;    /* light purple slate */
+  background: #1B1F32;    /* very dark blue‑purple */
+  background-alt: #2D3050;    /* mid‑dark slate */
+  surface0: #3D3F63;    /* muted indigo */
+  surface1: #505179;    /* softer violet */
+  surface2: #666689;    /* light purple slate */
 
-  border:          #2A2D4E;    /* subtle divider */
-  shadow:          rgba(0,0,0,0.5);
+  border: #2A2D4E;    /* subtle divider */
+  shadow: rgba(0,0,0,0.5);
 
-  foreground:      #E0E0EB;    /* soft off‑white for text */
+  foreground: #E0E0EB;    /* soft off‑white for text */
   /* — Accent palette (pulled from hair highlights & neon lights) — */
-  accent-teal:     #40C8C0;    /* teal from hair highlights */
-  accent-coral:    #FF7F7F;    /* warm coral from neon window glow */
-  accent-orange:   #FFB86C;    /* cafe‑warm orange */
-  accent-magenta:  #C18AFF;    /* soft neon magenta */
-  accent-yellow:   #F1BA4C;    /* sunny yellow from reflections */
+  accent-teal: #40C8C0;    /* teal from hair highlights */
+  accent-coral: #FF7F7F;    /* warm coral from neon window glow */
+  accent-orange: #FFB86C;    /* cafe‑warm orange */
+  accent-magenta: #C18AFF;    /* soft neon magenta */
+  accent-yellow: #F1BA4C;    /* sunny yellow from reflections */
   /* — Status colors — */
-  success:         #40C8C0;    /* teal */
-  info:            #89B4FA;    /* cool sky blue */
-  warning:         #F1BA4C;    /* yellow */
-  critical:        #FF7F7F;    /* coral red */
+  success: #40C8C0;    /* teal */
+  info: #89B4FA;    /* cool sky blue */
+  warning: #F1BA4C;    /* yellow */
+  critical: #FF7F7F;    /* coral red */
 }
