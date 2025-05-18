@@ -11,17 +11,18 @@
 
 @define-color foreground #E0E0EB;    /* soft off‑white for text */
 
+/* — WorksSpace Palette — */
+@define-color pacman #ecdf42;      /* pacman colors for active */
+@define-color ghost #003cc7;      /* ghost colors for default */
+@define-color cherry #de1e1e;      /* cherry colors for urgent */
+@define-color pellet #fffbcf;      /* lighter pellet color for empty */
+
 /* — Accent palette (pulled from hair highlights & neon lights) — */
 @define-color accent-teal #40C8C0;    /* teal from hair highlights */
 @define-color accent-coral #FF7F7F;    /* warm coral from neon window glow */
 @define-color accent-orange #FFB86C;    /* cafe‑warm orange */
 @define-color accent-magenta #C18AFF;    /* soft neon magenta */
 @define-color accent-yellow #F1BA4C;    /* sunny yellow from reflections */
-
-@define-color pacman #ecdf42;    
-@define-color ghost #003cc7;    
-@define-color cherry #de1e1e;
-@define-color pellet #fffbcf;
 
 /* — Status colors — */
 @define-color success #40C8C0;    /* teal */
