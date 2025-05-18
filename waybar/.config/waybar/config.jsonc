@@ -64,7 +64,7 @@
     "format-icons": {
       "empty": "...",
       "urgent": "🍒",
-      "default": "ᗣ",
+      "default": "󰊠",
       "active": "ᗧ"
       //"empty": "○",
       //"urgent": "",
