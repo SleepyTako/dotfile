@@ -64,7 +64,7 @@
     "format-icons": {
       "empty": "...",
       "urgent": "",
-      "default": "ᗣ",
+      "default": "<i class="fa-solid fa-ghost"></i>",
       "active": "ᗧ"
       //"empty": "○",
       //"urgent": "",
