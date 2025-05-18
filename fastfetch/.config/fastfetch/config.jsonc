@@ -12,12 +12,7 @@ fastfetch --config hyde/*.jsonc
   "logo": {
     "source": "/home/Squeaks/.config/fastfetch/logo/estarosa.png",
     "height": 10
-  },*/
-{  
-  image.path = /home/Squeaks/.config/fastfetch/logo/estarosa.png
-  image.width = 30
   },
-
   "display": {
     "separator": " : "
   },
