@@ -71,16 +71,16 @@
  margin: 0 16px;
 }
 
-/* Audio Group: Cava, Pulseaudio, Backlight, MPRIS */
-#waybar .modules-right > widget > #cava {
+/* Audio Group: MPRIS, Cava, Pulseaudio, Backlight */
+#waybar .modules-right > widget > #mpris {
     border-radius: 15px 0 0 15px;
     margin-left: 16px;
 }
-#waybar .modules-right > widget > #pulseaudio,
-#waybar .modules-right > widget > #backlight {
+#waybar .modules-right > widget > #cava,
+#waybar .modules-right > widget > #pulseaudio {
     border-radius: 0;
 }
-#waybar .modules-right > widget > #mpris {
+#waybar .modules-right > widget > #backlight {
     border-radius: 0 15px 15px 0;
     margin-right: 4px;
 }
