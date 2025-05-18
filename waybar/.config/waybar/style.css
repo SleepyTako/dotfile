@@ -126,18 +126,20 @@
 #waybar #workspaces button.empty { color: @pellet; }
 #waybar #workspaces button.active { color: @pacman; }
 #waybar #workspaces button.urgent { color: @cherry; }
-#waybar #clock { color: @accent-coral; }
-#waybar #pulseaudio { color: @info; }
-#waybar #backlight { color: @accent-orange; }
-#waybar #cpu { color: @critical; }
-#waybar #memory { color: @accent-magenta; }
-#waybar #disk { color: @accent-yellow; }
-#waybar #temperature { color: @info; }
+#waybar #clock { color: @success; }
+#waybar #pulseaudio { color: @success; }
+#waybar #backlight { color: @success; }
+#waybar #cpu { color: @success; }
+#waybar #memory { color: @success; }
+#waybar #disk { color: @sucess; }
+#waybar #temperature { color: @success; }
 #waybar #battery { color: @success; }
 #waybar #battery.warning { color: @warning; }
 #waybar #battery.critical { color: @critical; }
-#waybar #network { color: @accent-yellow; }
-#waybar #bluetooth { color: @info; }
+#waybar #network { color: @success; }
+#waybar #network.connected { color: @success; }
+#waybar #network.disconnected { color: @critical; }
+#waybar #bluetooth { color: @success; }
 #waybar #bluetooth.connected { color: @success; }
 #waybar #bluetooth.disconnected { color: @critical; }
 #waybar #cava:hover { color: @foreground; background: @accent-coral; border-color: @accent-coral; }
