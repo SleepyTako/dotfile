@@ -93,7 +93,7 @@
   "backlight": {
     "device": "intel_backlight",
     "format": " {percentage}%",
-    "step": 5,
+    "interval": 5,
     "on-click": "brightnessctl set +5%",
     "on-click-right": "brightnessctl set 5%",
     "tooltip-format": "{percentage}%"
