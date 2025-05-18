@@ -57,7 +57,7 @@
 /* General Group: Clock → Tray */
 #waybar .modules-left > widget > #clock {
     border-radius: 15px 0 0 15px;
-    margin-left: 8px;
+    margin-left: 4px;
 }
 #waybar .modules-left > widget:last-child > #tray {
     border-radius: 0 15px 15px 0;
@@ -104,7 +104,7 @@
 #waybar .modules-right > widget > #custom\/shutdown {
     border-radius: 15px;
     margin-left: 4px;
-    margin-right: 16px;
+    margin-right: 4px;
 }
 
 /*------------------------------------------------------------
