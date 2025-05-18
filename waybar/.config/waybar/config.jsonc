@@ -126,18 +126,11 @@
     "tooltip-format-wifi": "Signal Strength: {signalStrength}%"
   },
   "bluetooth": {
-    "format":       "{icon} {adapter}",       // icon + adapter name
-    "format-icons": {
-      "connected":    "",
-      "disconnected": "",
-      "connecting":   ""
-    },
-    "tooltip-format": "Address: {address}",  // show controller address on hover
-    "interval":     10
-  },
-    "tooltip":      true,
-    "interval":     10
-  },
+    "format": " 󰂯 ",
+    "tooltip": true,
+	  "tooltip-format": "Bluetooth Settings",
+    "on-click": "bluetuith",
+   },
 
   //========================================
   // Music (MPRIS)
