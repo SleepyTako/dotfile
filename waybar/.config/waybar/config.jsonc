@@ -8,7 +8,6 @@
   "modules-left": [
     "clock",
     //"weather",    // requires weather module/plugin
-    "tray",
     "wlr/taskbar"
   ],
   "modules-center": [
