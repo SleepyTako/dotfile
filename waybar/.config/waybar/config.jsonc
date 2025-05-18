@@ -90,8 +90,6 @@
     "on-click": "pavucontrol"
   },
 
-   backlight:
-   Uncomment once brightnessctl is installed and Waybar supports backlight
   "backlight": {
     "format": " {percentage}%",
     "step": 5,
