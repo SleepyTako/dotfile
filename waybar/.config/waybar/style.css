@@ -15,7 +15,7 @@
 #waybar .modules-left,
 #waybar .modules-center,
 #waybar .modules-right {
-    background: @surface1;
+    /*background: @surface1;*/
     border-radius: 8px;
     padding: 4px 8px;
     margin: 0 6px;
