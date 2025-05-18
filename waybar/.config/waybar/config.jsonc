@@ -2,13 +2,13 @@
   "position": "top",
 
   // Positions of Modules //
-  "modules-left": ["cpu", "memory", "disk", "cava", "mpris"],
-  "modules-center": ["hyprland/workspaces"],
-  "modules-right": ["network", "tray", "pulseaudio", "battery", "clock"],
+  "modules-left": ["cpu", "memory", "disk", "hyprland/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": ["cava", "mpris", "network", "tray", "pulseaudio", "battery"],
 
   // Modules Formatting //
   "clock": {
-    "format": "<span foreground='#f5c2e7'>   </span>{:%a %d %H:%M}",
+    "format": "<span foreground='#f5c2e7'>   </span>{:%A - %B %d, %Y - %H:%M:%S}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
 
