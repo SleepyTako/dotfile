@@ -144,7 +144,7 @@ button:hover {
     transition: 0.3s; 
 }
 #cava:hover{
-    color: #32111C;
-    background: #EF3946;
-    border-color: #32111C;
+    color: @texthov;
+    background: @backgroundhov;
+    border-color: @borderhov;
 }
