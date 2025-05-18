@@ -14,7 +14,7 @@
 	"default": "○",
 	"default": "●"
 	},
-
+  },
   "battery": {
     "states": {
       "warning": 30,
