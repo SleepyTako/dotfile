@@ -125,7 +125,12 @@
     "format-disconnected": "<span size='13000' foreground='#f5e0dc'>  </span>Disconnected",
     "tooltip-format-wifi": "Signal Strength: {signalStrength}%"
   },
-  "bluetooth": {"format": "{adapter}: {info}", "interval": 30},
+  "bluetooth": {
+  "adapter": "A4:C3:F0:CC:ED:FD",               // ensure it matches your device
+  "format":  " {name} ({connected?})",
+  "format-icons": {"connected": "", "disconnected": ""},
+  "interval": 10
+},
 
   //========================================
   // Music (MPRIS)
