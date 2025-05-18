@@ -1,17 +1,36 @@
+// ~/.config/waybar/config.jsonc
 {
   "position": "top",
 
-  // Positions of Modules //
+  //========================================
+  // Module Positioning
+  //========================================
   "modules-left": ["cpu", "memory", "disk", "hyprland/workspaces"],
   "modules-center": ["clock"],
   "modules-right": ["cava", "mpris", "network", "tray", "pulseaudio", "battery"],
 
-  // Modules Formatting //
+  //========================================
+  // General: Clock, Weather, Tray
+  //========================================
   "clock": {
     "format": "<span foreground='#f5c2e7'>   </span>{:%A - %B %d, %Y - %H:%M:%S}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
 
+  // Weather module (TODO: configure)
+  "weather": {
+    "format": "{icon} {temp}°C",
+    "tooltip-format": "{location}\n{description}"
+  },
+
+  "tray": {
+    "icon-size": 18,
+    "spacing": 10
+  },
+
+  //========================================
+  // Workspace: Hyprland Workspaces
+  //========================================
   "hyprland/workspaces": {
     "format": "{icon}",
     "tooltip": false,
@@ -22,39 +41,9 @@
     }
   },
 
-  "battery": {
-    "states": {
-      "warning": 30,
-      "critical": 15
-    },
-    "format": "<span size='13000' foreground='#a6e3a1'>{icon} </span> {capacity}%",
-    "format-warning": "<span size='13000' foreground='#B1E3AD'>{icon} </span> {capacity}%",
-    "format-critical": "<span size='13000' foreground='#E38C8F'>{icon} </span> {capacity}%",
-    "format-charging": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
-    "format-plugged": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
-    "format-alt": "<span size='13000' foreground='#B1E3AD'>{icon} </span> {time}",
-    "format-full": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
-    "format-icons": ["", "", "", "", ""],
-    "tooltip-format": "{time}"
-  },
-
-  "network": {
-    "format-wifi": "<span size='13000' foreground='#f5e0dc'>  </span>{essid}",
-    "format-ethernet": "<span size='13000' foreground='#f5e0dc'>󰤭  </span> Disconnected",
-    "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "<span size='13000' foreground='#f5e0dc'>  </span>Disconnected",
-    "tooltip-format-wifi": "Signal Strenght: {signalStrength}%"
-  },
-
-  "pulseaudio": {
-    "format": "{icon}  {volume}%",
-    "format-muted": "",
-    "format-icons": {
-      "default": ["", "", " "]
-    },
-    "on-click": "pavucontrol"
-  },
-
+  //========================================
+  // Audio: Cava, Mic, Backlight
+  //========================================
   "cava": {
     "cava_config": "/home/Squeaks/.config/cava/config",
     "framerate": 240,
@@ -78,19 +67,27 @@
     }
   },
 
-  "mpris": {
-    "format": " {status_icon} {dynamic}",
-    "interval": 1,
-    "dynamic-len": 40,
-    "status-icons": {
-      "playing": "⏸",
-      "paused": "▶",
-      "stopped": ""
+  "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "format-muted": "",
+    "format-icons": {
+      "default": ["", "", " "]
     },
-    "dynamic-order": ["title", "artist"],
-    "ignored-players": ["firefox"]
+    "on-click": "pavucontrol"
   },
 
+  // Backlight module (TODO: configure)
+  "backlight": {
+    "format": " {percentage}%",
+    "step": 5,
+    "on-click": "brightnessctl set +5%",
+    "on-click-right": "brightnessctl set 5%",
+    "tooltip-format": "{percentage}%"
+  },
+
+  //========================================
+  // Hardware: CPU, Memory, Disk, Temperature, Battery, Wifi, Bluetooth
+  //========================================
   "cpu": {
     "interval": 15,
     "format": "  {}%",
@@ -109,9 +106,66 @@
     "path": "/"
   },
 
-  "tray": {
-    "icon-size": 18,
-    "spacing": 10
-  }
+  // Temperature module (TODO: configure)
+  "temperature": {
+    "format": " {}°C",
+    "paths": ["/sys/class/thermal/thermal_zone0/temp"],
+    "interval": 30
+  },
 
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "<span size='13000' foreground='#a6e3a1'>{icon} </span> {capacity}%",
+    "format-warning": "<span size='13000' foreground='#B1E3AD'>{icon} </span> {capacity}%",
+    "format-critical": "<span size='13000' foreground='#E38C8F'>{icon} </span> {capacity}%",
+    "format-charging": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
+    "format-plugged": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
+    "format-alt": "<span size='13000' foreground='#B1E3AD'>{icon} </span> {time}",
+    "format-full": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
+    "format-icons": ["", "", "", "", ""],
+    "tooltip-format": "{time}"
+  },
+
+  "network": {
+    "format-wifi": "<span size='13000' foreground='#f5e0dc'>  </span>{essid}",
+    "format-ethernet": "<span size='13000' foreground='#f5e0dc'>󰤭  </span> Disconnected",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "<span size='13000' foreground='#f5e0dc'>  </span>Disconnected",
+    "tooltip-format-wifi": "Signal Strength: {signalStrength}%"
+  },
+
+  // Bluetooth module (TODO: configure)
+  "bluetooth": {
+    "format": "{adapter}: {info}",
+    "interval": 30
+  },
+
+  //========================================
+  // General (MPRIS music)
+  //========================================
+  "mpris": {
+    "format": " {status_icon} {dynamic}",
+    "interval": 1,
+    "dynamic-len": 40,
+    "status-icons": {
+      "playing": "⏸",
+      "paused": "▶",
+      "stopped": ""
+    },
+    "dynamic-order": ["title", "artist"],
+    "ignored-players": ["firefox"]
+  },
+
+  //========================================
+  // Power: Shutdown
+  //========================================
+  "custom/shutdown": {
+    "exec": "poweroff",
+    "return-type": "json",
+    "format": "",
+    "on-click": "poweroff"
+  }
 }
