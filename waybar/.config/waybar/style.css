@@ -3,6 +3,16 @@
 @import "colors.css";
 
 /*------------------------------------------------------------
+ Global Fonts
+------------------------------------------------------------*/
+*{
+  font-family: "MesloGS Nerd Font Mono Bold";
+  font-size: 16px;
+  min-height: 10px;
+  font-weight: bold;
+}
+
+/*------------------------------------------------------------
  Global bar background
 ------------------------------------------------------------*/
 #waybar {
@@ -112,6 +122,8 @@
 /*------------------------------------------------------------
  Individual module styles
 ------------------------------------------------------------*/
+#waybar #workspaces button.active { color: @accent-coral; }
+#waybar #workspaces button.urgent { color: @critical; }
 #waybar #clock { color: @accent-coral; }
 #waybar #pulseaudio { color: @info; }
 #waybar #backlight { color: @accent-orange; }
