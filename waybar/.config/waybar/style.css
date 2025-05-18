@@ -116,7 +116,8 @@
 
 /* Power Group: Shutdown */
 #waybar .modules-right > widget > #custom-shutdown {
-    border-radius: 15px;
+    font-size: 18px;
+    border-radius: 12px;
     margin-left: 4px;
     margin-right: 0px;
 }
