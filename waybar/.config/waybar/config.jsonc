@@ -1,8 +1,13 @@
 {
   "position": "top",
+
+// Positions of Modules //
   "modules-left": ["hyprland/window", "cava", "mpris"],
   "modules-center": ["hyprland/workspaces"],
   "modules-right": ["network", "pulseaudio", "battery", "clock"],
+
+
+// Modules Formatting //
   "clock": {
     "format": "<span foreground='#f5c2e7'>   </span>{:%a %d %H:%M}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
@@ -13,8 +18,8 @@
 	"format-icons": {
 	"default": "○",
 	"default": "●"
-	},
   },
+
   "battery": {
     "states": {
       "warning": 30,
