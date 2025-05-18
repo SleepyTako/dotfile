@@ -67,7 +67,8 @@
 
 /* Workspace Group: Workspaces */
 #waybar .modules-center > widget > #workspaces {
-    margin: 0 16px;
+ border-radius: 15px;   
+ margin: 0 16px;
 }
 
 /* Audio Group: Cava, Pulseaudio, Backlight, MPRIS */
