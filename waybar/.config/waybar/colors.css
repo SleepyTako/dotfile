@@ -1,32 +1,23 @@
-@define-color rosewater #f5e0dc;
-@define-color flamingo #f2cdcd;
-@define-color pink #f5c2e7;
-@define-color mauve #cba6f7;
-@define-color red #f38ba8;
-@define-color maroon #eba0ac;
-@define-color peach #fab387;
-@define-color yellow #f9e2af;
-@define-color green #a6e3a1;
-@define-color teal #94e2d5;
-@define-color sky #89dceb;
-@define-color sapphire #74c7ec;
-@define-color blue #89b4fa;
-@define-color lavender #b4befe;
-@define-color text #cdd6f4;
-@define-color subtext1 #bac2de;
-@define-color subtext0 #a6adc8;
-@define-color overlay2 #9399b2;
-@define-color overlay1 #7f849c;
-@define-color overlay0 #6c7086;
-@define-color surface2 #585b70;
-@define-color surface1 #45475a;
-@define-color surface0 #313244;
-@define-color base #1e1e2e;
-@define-color mantle #181825;
-@define-color crust #11111b;
-@define-color text #fff1df;
-@define-color background #251502;
-@define-color border #ffa154;
-@define-color texthov #32111C;
-@define-color backgroundhov #EF3946;
-@define-color borderhov #EF3946;
+@define-color background #1B1F32;    /* very dark blue‑purple */
+@define-color background-alt #2D3050;    /* mid‑dark slate */
+@define-color surface0 #3D3F63;    /* muted indigo */
+@define-color surface1 #505179;    /* softer violet */
+@define-color surface2 #666689;    /* light purple slate */
+
+@define-color border #2A2D4E;    /* subtle divider */
+@define-color shadow rgba(0,0,0,0.5);
+
+@define-color foreground #E0E0EB;    /* soft off‑white for text */
+
+/* — Accent palette (pulled from hair highlights & neon lights) — */
+@define-color accent-teal #40C8C0;    /* teal from hair highlights */
+@define-color accent-coral #FF7F7F;    /* warm coral from neon window glow */
+@define-color accent-orange #FFB86C;    /* cafe‑warm orange */
+@define-color accent-magenta #C18AFF;    /* soft neon magenta */
+@define-color accent-yellow #F1BA4C;    /* sunny yellow from reflections */
+
+/* — Status colors — */
+@define-color success #40C8C0;    /* teal */
+@define-color info #89B4FA;    /* cool sky blue */
+@define-color warning #F1BA4C;    /* yellow */
+@define-color critical #FF7F7F;    /* coral red */
