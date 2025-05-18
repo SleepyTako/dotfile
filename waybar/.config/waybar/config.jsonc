@@ -52,7 +52,7 @@
   // Workspace: Hyprland Workspaces
   //========================================
   "hyprland/workspaces": {
-    "persistent-workspaces": {"5": []}
+    "persistent-workspaces": {"5": []},
     "format": "{icon}",
     "tooltip": false,
     "format-icons": {
