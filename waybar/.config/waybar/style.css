@@ -141,6 +141,6 @@
 #waybar #network.connected { color: @success; }
 #waybar #network.disconnected { color: @critical; }
 #waybar #bluetooth { color: @success; }
-#waybar #bluetooth.connected { color: @success; }
-#waybar #bluetooth.disconnected { color: @critical; }
+#waybar #bluetooth.disabled { color: @critical; }
+#waybar #bluetooth.off { color: @critical; }
 #waybar #cava:hover { color: @foreground; background: @accent-coral; border-color: @accent-coral; }
