@@ -135,6 +135,7 @@ button:hover {
 }
 
 #cava{
+    font-size: 12px;
     transition: none;
     transition: 0.3s; 
 }
