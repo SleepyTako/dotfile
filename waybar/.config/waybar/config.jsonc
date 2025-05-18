@@ -16,7 +16,7 @@
   "modules-right": [
     "cava",
     "pulseaudio",
-    //"backlight",  // requires brightnessctl and Waybar built with backlight support
+    "backlight",  // requires brightnessctl and Waybar built with backlight support
     "mpris",
     "cpu",
     "memory",
@@ -90,15 +90,15 @@
     "on-click": "pavucontrol"
   },
 
-  // backlight:
-  // Uncomment once brightnessctl is installed and Waybar supports backlight
-  //"backlight": {
-  //  "format": " {percentage}%",
-  //  "step": 5,
-  //  "on-click": "brightnessctl set +5%",
-  //  "on-click-right": "brightnessctl set 5%",
-  //  "tooltip-format": "{percentage}%"
-  //},
+   backlight:
+   Uncomment once brightnessctl is installed and Waybar supports backlight
+  "backlight": {
+    "format": " {percentage}%",
+    "step": 5,
+    "on-click": "brightnessctl set +5%",
+    "on-click-right": "brightnessctl set 5%",
+    "tooltip-format": "{percentage}%"
+  },
 
   //========================================
   // Hardware: CPU, Memory, Disk, Temperature, Battery, Network, Bluetooth
