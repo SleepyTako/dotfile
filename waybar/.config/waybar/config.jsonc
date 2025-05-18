@@ -101,8 +101,14 @@
 
   "pulseaudio": {
     "format": "{icon}  {volume}%",
-    "format-muted": "",
-    "format-icons": {"default": ["",""," "]},
+    "states": {
+      "High": 80,
+      "Med": 50,
+      "Low": 10,
+      "Off": 0
+      },
+    "format-muted": "",
+    "format-icons": {"default": ["", "", "", ""]},
     "on-click": "pavucontrol"
   },
 
