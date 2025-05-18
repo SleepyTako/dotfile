@@ -5,9 +5,28 @@
   //========================================
   // Module Positioning
   //========================================
-  "modules-left": ["cpu", "memory", "disk", "hyprland/workspaces"],
-  "modules-center": ["clock"],
-  "modules-right": ["cava", "mpris", "network", "tray", "pulseaudio", "battery"],
+  "modules-left": [
+    "hyprland/workspaces",
+    "cpu",
+    "memory",
+    "disk",
+    "temperature",
+    "battery",
+    "network",
+    "bluetooth"
+  ],
+  "modules-center": [
+    "clock",
+    "weather"
+  ],
+  "modules-right": [
+    "tray",
+    "cava",
+    "pulseaudio",
+    "backlight",
+    "mpris",
+    "custom/shutdown"
+  ],
 
   //========================================
   // General: Clock, Weather, Tray
@@ -17,7 +36,6 @@
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
 
-  // Weather module (TODO: configure)
   "weather": {
     "format": "{icon} {temp}°C",
     "tooltip-format": "{location}\n{description}"
@@ -76,7 +94,6 @@
     "on-click": "pavucontrol"
   },
 
-  // Backlight module (TODO: configure)
   "backlight": {
     "format": " {percentage}%",
     "step": 5,
@@ -106,7 +123,6 @@
     "path": "/"
   },
 
-  // Temperature module (TODO: configure)
   "temperature": {
     "format": " {}°C",
     "paths": ["/sys/class/thermal/thermal_zone0/temp"],
@@ -134,10 +150,9 @@
     "format-ethernet": "<span size='13000' foreground='#f5e0dc'>󰤭  </span> Disconnected",
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "<span size='13000' foreground='#f5e0dc'>  </span>Disconnected",
-    "tooltip-format-wifi": "Signal Strength: {signalStrength}%"
+    "tooltip-format-wifi": "Signal Strength: {signalStrength:%?}%"
   },
 
-  // Bluetooth module (TODO: configure)
   "bluetooth": {
     "format": "{adapter}: {info}",
     "interval": 30
