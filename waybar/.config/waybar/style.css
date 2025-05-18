@@ -122,10 +122,10 @@
 /*------------------------------------------------------------
  Individual module styles
 ------------------------------------------------------------*/
-#waybar #workspaces button { color: @blue; }
-#waybar #workspaces button.empty { color: @yellow; }
-#waybar #workspaces button.active { color: @yellow; }
-#waybar #workspaces button.urgent { color: @red; }
+#waybar #workspaces button { color: @ghost; }
+#waybar #workspaces button.empty { color: @pellet; }
+#waybar #workspaces button.active { color: @pacman; }
+#waybar #workspaces button.urgent { color: @cherry; }
 #waybar #clock { color: @accent-coral; }
 #waybar #pulseaudio { color: @info; }
 #waybar #backlight { color: @accent-orange; }
