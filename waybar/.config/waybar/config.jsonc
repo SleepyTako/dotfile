@@ -186,7 +186,7 @@
   // Power: Shutdown
   //==================================================================
   "custom/shutdown": {
-    "format": "",
+    "format": "󰐥",
     "on-click": "poweroff"
   }
 }
