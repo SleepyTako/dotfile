@@ -177,10 +177,4 @@
   //========================================
   // Power: Shutdown
   //========================================
-  "custom/shutdown": {
-    "exec": "poweroff",
-    "return-type": "json",
-    "format": "",
-    "on-click": "poweroff"
-  }
 }
