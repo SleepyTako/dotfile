@@ -122,6 +122,7 @@
 /*------------------------------------------------------------
  Individual module styles
 ------------------------------------------------------------*/
+#waybar #workspaces button { color: @accent-magenta; }
 #waybar #workspaces button.active { color: @accent-coral; }
 #waybar #workspaces button.urgent { color: @critical; }
 #waybar #clock { color: @accent-coral; }
