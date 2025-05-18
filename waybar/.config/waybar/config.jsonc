@@ -153,7 +153,10 @@
     "interval": 30
   },
   "battery": {
-    "states": {"warning": 30, "critical": 15},
+    "states": {
+      "warning": 30,
+      "critical": 15
+      },
     "format": "{icon}  {capacity}%",
     "format-warning": "{icon}  {capacity}%",
     "format-critical": "{icon}  {capacity}%",
@@ -162,6 +165,7 @@
     "format-full": "  {capacity}%",
     "format-icons": ["","","","",""],
     "tooltip-format": "{time}"
+    "max-length": 25
   },
   "network": {
     "format-wifi": " ",
