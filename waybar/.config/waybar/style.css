@@ -122,14 +122,22 @@
 /*------------------------------------------------------------
  Individual module styles
 ------------------------------------------------------------*/
+/* General Group: Clock */
+#waybar #clock { color: @success; }
+
+/* Workspace Group: Workspaces */
+#waybar #workspaces button.active { color: @pacman; }
 #waybar #workspaces button { color: @ghost; }
 #waybar #workspaces button.empty { color: @pellet; }
-#waybar #workspaces button.active { color: @pacman; }
 #waybar #workspaces button.urgent { color: @cherry; }
-#waybar #clock { color: @success; }
+
+/* Audio Group: Cava, Pulseaudio, Backlight */
 #waybar #cava { color: @success; }
+#waybar #cava:hover { color: @foreground; background: @accent-coral; border-color: @accent-coral; }
 #waybar #pulseaudio { color: @success; }
 #waybar #backlight { color: @success; }
+
+/* Hardware Group: CPU → Bluetooth */
 #waybar #cpu { color: @success; }
 #waybar #memory { color: @success; }
 #waybar #disk { color: @success; }
@@ -144,4 +152,6 @@
 #waybar #bluetooth { color: @success; }
 #waybar #bluetooth.disabled { color: @critical; }
 #waybar #bluetooth.off { color: @critical; }
-#waybar #cava:hover { color: @foreground; background: @accent-coral; border-color: @accent-coral; }
+
+/* Power Group: Shutdown */
+#waybar #custom\/shutdown { color: @critical; }
