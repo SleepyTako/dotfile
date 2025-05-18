@@ -60,9 +60,9 @@
     "format": "{icon}",
     "tooltip": false,
     "format-icons": {
-      "urgent": "",
-      "default": "○",
-      "active": "●"}
+      "urgent": "",
+      "default": "",
+      "active": ""}
       },
 
   //========================================
