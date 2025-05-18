@@ -180,11 +180,11 @@
   //========================================
   "bluetooth": {
     "controller":        "hci0",                      // explicit controller alias
-    "format":            " {status}",               // show overall status
-    "format-on":         " On",                     // controller on, no devices
-    "format-off":        " Off",                    // controller off
-    "format-disabled":   "",                         // hide when disabled
-    "format-connected":  " {num_connections} connected",  // devices connected
+    "format":            "󰂯 {status}",               // show overall status
+    "format-on":         "󰂯 On",                     // controller on, no devices
+    "format-off":        "󰂲 Off",                    // controller off
+    "format-disabled":   "󰂲",                         // hide when disabled
+    "format-connected":  "󰂱 {num_connections} connected",  // devices connected
     "format-device-preference": ["Scintillate39"],    // preferential device alias list
     "tooltip-format":    "{controller_alias}
 {controller_address}",
