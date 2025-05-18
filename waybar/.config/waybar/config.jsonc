@@ -2,7 +2,7 @@
   "position": "top",
 
   // Positions of Modules //
-  "modules-left": ["cpu", "memory", "disk", "hyprland/workspaces"],
+  "modules-left": ["cpu" "memory" "disk", "hyprland/workspaces"],
   "modules-center": ["clock"],
   "modules-right": ["cava", "mpris", "network", "tray", "pulseaudio", "battery"],
 
