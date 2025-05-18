@@ -3,11 +3,18 @@
 @import "colors.css";
 
 /*------------------------------------------------------------
+ Global bar background
+------------------------------------------------------------*/
+#waybar {
+    background: transparent;
+}
+
+/*------------------------------------------------------------
  Group containers (left, center, right)
 ------------------------------------------------------------*/
-window#waybar .modules-left,
-window#waybar .modules-center,
-window#waybar .modules-right {
+#waybar .modules-left,
+#waybar .modules-center,
+#waybar .modules-right {
     background: @surface1;
     border-radius: 8px;
     padding: 4px 8px;
@@ -15,28 +22,28 @@ window#waybar .modules-right {
 }
 
 /* Normalize widget spacing inside groups */
-window#waybar .modules-left > widget > *,
-window#waybar .modules-center > widget > *,
-window#waybar .modules-right > widget > * {
+#waybar .modules-left > widget > *,
+#waybar .modules-center > widget > *,
+#waybar .modules-right > widget > * {
     margin: 0;
 }
 
 /*------------------------------------------------------------
  Module sizing & defaults
 ------------------------------------------------------------*/
-#pulseaudio,
-#cava,
-#mpris,
-#clock,
-#battery,
-#cpu,
-#memory,
-#disk,
-#temperature,
-#backlight,
-#network,
-#bluetooth,
-#custom\/shutdown {
+#waybar #pulseaudio,
+#waybar #cava,
+#waybar #mpris,
+#waybar #clock,
+#waybar #battery,
+#waybar #cpu,
+#waybar #memory,
+#waybar #disk,
+#waybar #temperature,
+#waybar #backlight,
+#waybar #network,
+#waybar #bluetooth,
+#waybar #custom\/shutdown {
   padding: 0 6px;
   border-bottom: 3px solid @border;
   color: @foreground;
@@ -46,62 +53,54 @@ window#waybar .modules-right > widget > * {
 /*------------------------------------------------------------
  Module grouping overrides
 ------------------------------------------------------------*/
-/* General Group: Clock, (Weather), Tray */
-#clock {
+/* General Group: Clock → Tray */
+#waybar .modules-left > widget > #clock {
     border-radius: 10px 0 0 10px;
     margin-left: 8px;
-    margin-right: 0;
 }
-#tray {
+#waybar .modules-left > widget:last-child > #tray {
     border-radius: 0 10px 10px 0;
-    margin-left: 0;
     margin-right: 16px;
 }
 
-/* Workspace Group: Workspaces container margins */
-#workspaces {
+/* Workspace Group: Workspaces */
+#waybar .modules-center > widget > #workspaces {
     margin: 0 16px;
 }
 
 /* Audio Group: Cava, Pulseaudio, Backlight, MPRIS */
-#cava {
+#waybar .modules-right > widget > #cava {
     border-radius: 10px 0 0 10px;
     margin-left: 16px;
-    margin-right: 0;
 }
-#pulseaudio,
-#backlight {
+#waybar .modules-right > widget > #pulseaudio,
+#waybar .modules-right > widget > #backlight {
     border-radius: 0;
-    margin: 0;
 }
-#mpris {
+#waybar .modules-right > widget > #mpris {
     border-radius: 0 10px 10px 0;
-    margin-left: 0;
     margin-right: 16px;
 }
 
-/* Hardware Group: CPU, Memory, Disk, Temperature, Battery, Network, Bluetooth */
-#cpu {
+/* Hardware Group: CPU → Bluetooth */
+#waybar .modules-right > widget > #cpu {
     border-radius: 10px 0 0 10px;
     margin-left: 16px;
-    margin-right: 0;
 }
-#memory,
-#disk,
-#temperature,
-#battery,
-#network {
+#waybar .modules-right > widget > #memory,
+#waybar .modules-right > widget > #disk,
+#waybar .modules-right > widget > #temperature,
+#waybar .modules-right > widget > #battery,
+#waybar .modules-right > widget > #network {
     border-radius: 0;
-    margin: 0;
 }
-#bluetooth {
+#waybar .modules-right > widget > #bluetooth {
     border-radius: 0 10px 10px 0;
-    margin-left: 0;
     margin-right: 16px;
 }
 
 /* Power Group: Shutdown */
-#custom\/shutdown {
+#waybar .modules-right > widget > #custom\/shutdown {
     border-radius: 10px;
     margin-left: 16px;
     margin-right: 16px;
@@ -110,18 +109,18 @@ window#waybar .modules-right > widget > * {
 /*------------------------------------------------------------
  Individual module styles
 ------------------------------------------------------------*/
-#clock { color: @accent-coral; border-bottom-color: @accent-coral; }
-#pulseaudio { color: @info; border-bottom-color: @info; }
-#backlight { color: @accent-orange; }
-#cpu { color: @critical; border-bottom-color: @critical; }
-#memory { color: @accent-magenta; border-bottom-color: @accent-magenta; }
-#disk { color: @accent-yellow; border-bottom-color: @accent-yellow; }
-#temperature { color: @info; border-bottom-color: @info; }
-#battery { color: @success; border-bottom-color: @success; }
-#battery.warning { color: @warning; border-bottom-color: @warning; }
-#battery.critical { color: @critical; border-bottom-color: @critical; }
-#network { color: @accent-yellow; border-bottom-color: @accent-yellow; }
-#bluetooth { color: @info; }
-#bluetooth.connected { color: @success; }
-#bluetooth.disconnected { color: @critical; }
-#cava:hover { color: @foreground; background: @accent-coral; border-color: @accent-coral; }
+#waybar #clock { color: @accent-coral; border-bottom-color: @accent-coral; }
+#waybar #pulseaudio { color: @info; border-bottom-color: @info; }
+#waybar #backlight { color: @accent-orange; }
+#waybar #cpu { color: @critical; border-bottom-color: @critical; }
+#waybar #memory { color: @accent-magenta; border-bottom-color: @accent-magenta; }
+#waybar #disk { color: @accent-yellow; border-bottom-color: @accent-yellow; }
+#waybar #temperature { color: @info; border-bottom-color: @info; }
+#waybar #battery { color: @success; border-bottom-color: @success; }
+#waybar #battery.warning { color: @warning; border-bottom-color: @warning; }
+#waybar #battery.critical { color: @critical; border-bottom-color: @critical; }
+#waybar #network { color: @accent-yellow; border-bottom-color: @accent-yellow; }
+#waybar #bluetooth { color: @info; }
+#waybar #bluetooth.connected { color: @success; }
+#waybar #bluetooth.disconnected { color: @critical; }
+#waybar #cava:hover { color: @foreground; background: @accent-coral; border-color: @accent-coral; }
