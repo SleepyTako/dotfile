@@ -137,10 +137,10 @@ button:hover {
     border-radius: 10px;
     transition: none;
     background: @background; 
-    color: #b3e7e0;
+    color: @text;
     border-bottom: 3px;
     border-style: solid;
-    border-color: #16d4b5;
+    border-color: @border;
     transition: 0.3s; 
 }
 #cava:hover{
