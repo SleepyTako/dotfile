@@ -52,10 +52,14 @@
   // Workspace: Hyprland Workspaces
   //========================================
   "hyprland/workspaces": {
+    "persistent-workspaces": {"5": []}
     "format": "{icon}",
     "tooltip": false,
-    "format-icons": {"urgent": "","default": "○","active": "●"}
-  },
+    "format-icons": {
+      "urgent": "",
+      "default": "○",
+      "active": "●"}
+    },
 
   //========================================
   // Audio: Cava, Pulseaudio
