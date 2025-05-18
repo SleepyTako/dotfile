@@ -125,7 +125,7 @@
 #waybar #workspaces button { color: @blue; }
 #waybar #workspaces button.empty { color: @yellow; }
 #waybar #workspaces button.active { color: @yellow; }
-#waybar #workspaces button.urgent { color: @yellow; }
+#waybar #workspaces button.urgent { color: @red; }
 #waybar #clock { color: @accent-coral; }
 #waybar #pulseaudio { color: @info; }
 #waybar #backlight { color: @accent-orange; }
