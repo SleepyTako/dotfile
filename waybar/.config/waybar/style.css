@@ -75,7 +75,7 @@ button:hover {
   padding-left: 10px;
   padding-right: 10px;
   border-bottom: 3px;
-  border-radius: 2px;
+  border-radius: 0px;
   border-style: solid;
   color: @text;
   background: @background; 
@@ -114,6 +114,7 @@ button:hover {
 
 #battery {
     color: @green;
+    border-radius: 10px;
     border-bottom: 2px solid @green;
 }
 
@@ -136,6 +137,7 @@ button:hover {
 
 #cava{
     font-size: 14px;
+    border-radius: 10px;
     transition: none;
     transition: 0.3s; 
 }
