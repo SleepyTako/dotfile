@@ -125,19 +125,31 @@
     "format-disconnected": "<span size='13000' foreground='#f5e0dc'>  </span>Disconnected",
     "tooltip-format-wifi": "Signal Strength: {signalStrength}%"
   },
+
+  //========================================
+  // Bluetooth (controller & device connect)
+  //========================================
   "bluetooth": {
-	"controller": "hci01", // specify the alias of the controller if there are more than 1 on the system
-	"format": " {status}",
-	"format-icons": {
-      		"connected":    "",
-      		"disconnected": "",
-      		"connecting":   ""
-    		},
-	"format-disabled": "", // an empty format will hide the module
-	"format-connected": " {num_connections} connected",
-	"tooltip-format": "{controller_alias}\t{controller_address}",
-	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
-	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+    "controller":        "hci0",                      // explicit controller alias
+    "format":            " {status}",               // show overall status
+    "format-on":         " On",                     // controller on, no devices
+    "format-off":        " Off",                    // controller off
+    "format-disabled":   "",                         // hide when disabled
+    "format-connected":  " {num_connections} connected",  // devices connected
+    "format-device-preference": ["Scintillate39"],    // preferential device alias list
+    "tooltip-format":    "{controller_alias}
+{controller_address}",
+    "tooltip-format-connected": 
+      "{controller_alias}
+{controller_address}
+
+{device_enumerate}",
+    "tooltip-format-enumerate-connected": 
+      "{device_alias} – {device_address}",
+    "on-click":          "kitty -e bluetoothctl",     // click to open interactive
+    "on-click-right":    "bash -c 'bluetoothctl connect Scintillate39'",  // right-click to connect
+    "on-click-middle":   "bash -c 'bluetoothctl disconnect Scintillate39'",
+    "interval":          10
   },
 
   //========================================
