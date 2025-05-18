@@ -76,7 +76,7 @@ button:hover {
   padding-right: 4px;
   color: @text;
   background: @background; 
-  border-color: @border;
+  border-color: @background;
   border-bottom: 3px;
   border-radius: 5px;
   border-style: solid;
