@@ -14,10 +14,10 @@
     "hyprland/workspaces"
   ],
   "modules-right": [
+    "mpris"
     "cava",
     "pulseaudio",
-    "backlight",  // requires brightnessctl and Waybar built with backlight support
-    "mpris",
+    "backlight",
     "cpu",
     "memory",
     "disk",
