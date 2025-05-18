@@ -62,10 +62,10 @@
     "format": "{icon}",
     "tooltip": false,
     "format-icons": {
-      "empty": "...",
+      "empty": "",
       "urgent": "",
-      "default": "",
-      "active": "ᗧ"
+      "default": "󰊠",
+      "active": "󰮯"
       //"empty": "○",
       //"urgent": "",
       //"default": "",
