@@ -109,10 +109,11 @@
   "backlight": {
     "device":           "intel_backlight",   // your sysfs folder
     "interval":         5,
-    "format":           " {percent}%",     // use {percent}
     "states": {
       "high": 50,
       "low": 49
+      },
+    "format":           "{icon} {percent}%",     // use {percent}
     "format-icons":     ["",""],          // optional: icon for low/high
     "on-click":         "brightnessctl set +5%",
     "on-click-right":   "brightnessctl set 5%",
