@@ -2,9 +2,9 @@
 {
   "position": "top",
 
-  //========================================
-  // Module Positioning (Weather & Backlight disabled until installed)
-  //========================================
+  //==================================================================
+  // Module Positioning (enable/disable modules below as needed)
+  //==================================================================
   "modules-left": [
     "clock",
     //"weather",    // requires weather module/plugin
@@ -28,54 +28,58 @@
     "custom/shutdown"
   ],
 
-  //========================================
+  //==================================================================
   // General: Clock, Tray
-  //========================================
+  //==================================================================
   "clock": {
     "format": "  {:%A - %B %d, %Y - %H:%M:%S}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
-
-  // weather:
-  // Uncomment and configure once you install a weather plugin or script
-  //"weather": {
-  //  "format": "{icon} {temp}°C",
-  //  "tooltip-format": "{location}\n{description}"
-  //},
-
+  // Weather placeholder (uncomment once installed)
+//  "weather": {
+//    "format": "{icon} {temp}°C",
+//    "tooltip-format": "{location}\n{description}"
+//  },
   "tray": {
     "icon-size": 18,
     "spacing": 10
   },
 
-  //========================================
-  // Workspace: Hyprland Workspaces
-  //========================================
+  //==================================================================
+  // Workspace: Hyprland
+  //==================================================================
   "hyprland/workspaces": {
     "persistent-workspaces": {
-      "1": [],
-      "2": [],
-      "3": [],
-      "4": [],
-      "5": []
-      },
+      "1": [], "2": [], "3": [], "4": [], "5": []
+    },
     "format": "{icon}",
     "tooltip": false,
     "format-icons": {
-      "empty": "",
-      "urgent": "",
+      "empty":   "",
+      "urgent":  "",
       "default": "󰊠",
-      "active": "󰮯"
-      //"empty": "○",
-      //"urgent": "",
-      //"default": "",
-      //"active": ""
+      "active":  "󰮯"
     }
   },
 
-  //========================================
-  // Audio: Cava, Pulseaudio
-  //========================================
+  //==================================================================
+  // Music (MPRIS)
+  //==================================================================
+  "mpris": {
+    "format": "{status_icon}",
+    "interval": 1,
+    "dynamic-len": 40,
+    "status-icons": {
+      "playing": "  ⏸",
+      "paused":  "   ▶",
+      "stopped": ""
+    },
+    "ignored-players": ["firefox"]
+  },
+
+  //==================================================================
+  // Audio: Cava (visualizer), Pulseaudio (volume)
+  //==================================================================
   "cava": {
     "cava_config": "/home/Squeaks/.config/cava/config",
     "framerate": 240,
@@ -93,50 +97,33 @@
     "waves": true,
     "noise_reduction": 0.77,
     "input_delay": 0,
-    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
-    "actions": {
-      "on-click-right": "mode"
-    }
+    "format-icons": ["▁","▂","▃","▄","▅","▆","▇","█"],
+    "actions": { "on-click-right": "mode" }
   },
-
   "pulseaudio": {
     "format": "{icon} {volume}%",
-    "states": {
-      "High": 80,
-      "Med": 50,
-      "Low": 10,
-      "Off": 0
-      },
+    "states": { "High": 80, "Med": 50, "Low": 10, "Off": 0 },
     "format-muted": " ",
-    "format-icons": {"default": [" ", " ", "  ", "  "]},
+    "format-icons": { "default": [" "," ","  ","  "] },
     "on-click": "pavucontrol"
   },
-
   "backlight": {
     "device": "intel_backlight",
     "interval": 5,
     "states": {
-      "90%": 90,
-      "80%": 80,
-      "70%": 70,
-      "60%": 60,
-      "50%": 50,
-      "40%": 40,
-      "30%": 30,
-      "20%": 20,
-      "10%": 10,
-      "1%": 0,
-      },
-    "format":           "{icon}  {percent}%",     // use {percent}
-    "format-icons":     ["󰹐", "󱩎", "󱩏", "󱩐", "󱩑", "󱩒", "󱩓", "󱩔", "󱩕", "󱩖"],
-    "on-click":         "brightnessctl set +5%",
-    "on-click-right":   "brightnessctl set 5%",
-    "tooltip-format":   "{percent}%"
+      "90%": 90, "80%": 80, "70%": 70, "60%": 60, "50%": 50,
+      "40%": 40, "30%": 30, "20%": 20, "10%": 10, "1%": 0
+    },
+    "format": "{icon}  {percent}%",
+    "format-icons": ["󰹐","󱩎","󱩏","󱩐","󱩑","󱩒","󱩓","󱩔","󱩕","󱩖"],
+    "on-click": "brightnessctl set +5%",
+    "on-click-right": "brightnessctl set 5%",
+    "tooltip-format": "{percent}%"
   },
 
-  //========================================
+  //==================================================================
   // Hardware: CPU, Memory, Disk, Temperature, Battery, Network, Bluetooth
-  //========================================
+  //==================================================================
   "cpu": {
     "interval": 15,
     "format": "  {}%",
@@ -147,18 +134,20 @@
     "format": "   {used:0.1f}GiB",
     "max-length": 10
   },
-  "disk": {"interval": 30, "format": "  {percentage_used}%", "path": "/"},
-  "temperature": {"format": " {temperatureC}°C",
-    "paths": ["/sys/class/thermal/thermal_zone0/temp"], 
+  "disk": {
+    "interval": 30,
+    "format": "  {percentage_used}%",
+    "path": "/"
+  },
+  "temperature": {
+    "format": " {temperatureC}°C",
+    "paths": ["/sys/class/thermal/thermal_zone0/temp"],
     "critical-threshold": 60,
-    "format-critical":"󰈸 {temperatureC}°C",
+    "format-critical": "󰈸 {temperatureC}°C",
     "interval": 30
   },
   "battery": {
-    "states": {
-      "warning": 30,
-      "critical": 15
-      },
+    "states": { "warning": 30, "critical": 15 },
     "format": "{icon}   {capacity}%",
     "format-warning": "{icon}   {capacity}%",
     "format-critical": "{icon}   {capacity}%",
@@ -176,52 +165,28 @@
     "format-disconnected": "󰖪 ",
     "tooltip-format-wifi": "Signal Strength: {signalStrength}%"
   },
-
-  //========================================
-  // Bluetooth (controller & device connect)
-  //========================================
   "bluetooth": {
-    "controller":        "hci0",                      // explicit controller alias
-    "format":            "󰂯  {status}",               // show overall status
-    "format-on":         "󰂯 ",                     // controller on, no devices
-    "format-off":        "󰂲 ",                    // controller off
-    "format-disabled":   "󰂲 ",                         // hide when disabled
-    "format-connected":  "󰂱  {num_connections} connected",  // devices connected
-    "format-device-preference": ["Scintillate39"],    // preferential device alias list
-    "tooltip-format":    "{controller_alias}
-{controller_address}",
-    "tooltip-format-connected": 
-      "{controller_alias}
-{controller_address}
-
-{device_enumerate}",
-    "tooltip-format-enumerate-connected": 
-      "{device_alias} – {device_address}",
-    "on-click":          "kitty -e bluetoothctl",     // click to open interactive
-    "on-click-right":    "bash -c 'bluetoothctl connect Scintillate39'",  // right-click to connect
-    "on-click-middle":   "bash -c 'bluetoothctl disconnect Scintillate39'",
-    "interval":          10
+    "controller": "hci0",
+    "format": "󰂯  {status}",
+    "format-on": "󰂯 ",
+    "format-off": "󰂲 ",
+    "format-disabled": "󰂲 ",
+    "format-connected": "󰂱  {num_connections} connected",
+    "format-device-preference": ["Scintillate39"],
+    "tooltip-format": "{controller_alias}\n{controller_address}",
+    "tooltip-format-connected": "{controller_alias}\n{controller_address}\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias} – {device_address}",
+    "on-click": "kitty -e bluetoothctl",
+    "on-click-right": "bash -c 'bluetoothctl connect Scintillate39'",
+    "on-click-middle": "bash -c 'bluetoothctl disconnect Scintillate39'",
+    "interval": 10
   },
 
-  //========================================
-  // Music (MPRIS)
-  //========================================
-  "mpris": {
-    "format": "{status_icon}",
-    "interval": 1,
-    "dynamic-len": 40,
-    "status-icons": {
-      "playing": "  ⏸",
-      "paused": "   ▶",
-      "stopped": ""
-      },
-    "ignored-players": [
-      "firefox"
-      ]
-  },
-
-  //========================================
+  //==================================================================
   // Power: Shutdown
-  //========================================
-  "custom/shutdown": {"format": "", "on-click": "poweroff"}
+  //==================================================================
+  "custom/shutdown": {
+    "format": "",
+    "on-click": "poweroff"
+  }
 }
