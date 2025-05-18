@@ -176,10 +176,6 @@ button:hover {
     border-color: @accent-coral;
 }
 
-/* ~/.config/waybar/style.css */
-
-@import "colors.css";
-
 /*------------------------------------------------------------
  Group containers (left, center, right)
 ------------------------------------------------------------*/
