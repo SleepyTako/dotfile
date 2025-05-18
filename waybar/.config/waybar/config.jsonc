@@ -6,7 +6,7 @@
   // Module Positioning (Weather & Backlight disabled until installed)
   //========================================
   "modules-left": [
-    //"clock",
+    "clock",
     //"weather",    // requires weather module/plugin
     "tray"
   ],
@@ -91,6 +91,7 @@
   },
 
   "backlight": {
+    "device": "intel_backlight",
     "format": " {percentage}%",
     "step": 5,
     "on-click": "brightnessctl set +5%",
