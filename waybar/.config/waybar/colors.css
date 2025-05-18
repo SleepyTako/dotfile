@@ -17,6 +17,8 @@
 @define-color accent-orange #FFB86C;    /* cafe‑warm orange */
 @define-color accent-magenta #C18AFF;    /* soft neon magenta */
 @define-color accent-yellow #F1BA4C;    /* sunny yellow from reflections */
+@define-color yellow #e3d530;    /* sunny yellow from reflections */
+@define-color blue #003cc7;    /* sunny yellow from reflections */
 
 /* — Status colors — */
 @define-color success #40C8C0;    /* teal */
