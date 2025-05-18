@@ -1,5 +1,5 @@
+/* ~/.config/waybar/style.css */
 
-/* @import "mocha.css"; */ 
 @import "colors.css";
 
 * {
@@ -7,7 +7,6 @@
     font-family: "JetbrainsMono Nerd Font";
     font-size: 16px;
     min-height: 10px;
-    /* font-weight: bold;*/
 }
 
 window#waybar {
@@ -29,8 +28,8 @@ button {
 
 button:hover {
     background: inherit;
-    color: @mauve;
-    border-top: 2px solid @mauve;
+    color: @accent-magenta;
+    border-top: 2px solid @accent-magenta;
 }
 
 #workspaces button {
@@ -39,18 +38,18 @@ button:hover {
 
 #workspaces button.focused {
     background-color: rgba(0, 0, 0, 0.3);
-    color: @rosewater;
-    border-top: 2px solid @rosewater;
+    color: @accent-magenta;
+    border-top: 2px solid @accent-magenta;
 }
 
 #workspaces button.active {
     background-color: rgba(0, 0, 0, 0.3);
-    color: @mauve;
-    border-top: 2px solid @mauve;
+    color: @accent-magenta;
+    border-top: 2px solid @accent-magenta;
 }
 
 #workspaces button.urgent {
-    background-color: #eb4d4b;
+    background-color: @critical;
 }
 
 /* Module Sizing */
@@ -69,54 +68,57 @@ button:hover {
 #network,
 #mode,
 #scratchpad {
-  margin-top: 2px;
-  margin-bottom: 2px;
-  margin-left: 4px;
-  margin-right: 4px;
-  padding-left: 4px;
-  padding-right: 4px;
-  border-bottom: 3px;
+  margin: 2px 4px;
+  padding: 0 4px;
+  border-bottom: 3px solid @border;
   border-radius: 5px;
-  border-style: solid;
-  color: @text;
-  background: @background; 
-  border-color: @border;
-
+  color: @foreground;
+  background: @background;
 }
 
 #clock {
-    color: @maroon;
-    border-bottom: 2px solid @maroon;
+    color: @accent-coral;
+    border-bottom-color: @accent-coral;
 }
 
 #clock.date {
-    color: @mauve;
-    border-bottom: 2px solid @mauve;
+    color: @accent-magenta;
+    border-bottom-color: @accent-magenta;
 }
 
 #pulseaudio {
-    color: @blue;
-    border-bottom: 2px solid @blue;
+    color: @info;
+    border-bottom-color: @info;
 }
 
 #network {
-    color: @yellow;
-    border-bottom: 2px solid @yellow;
+    color: @accent-yellow;
+    border-bottom-color: @accent-yellow;
 }
 
 #idle_inhibitor {
     margin-right: 12px;
-    color: #7cb342;
+    color: @success;
 }
 
 #idle_inhibitor.activated {
-    color: @red;
+    color: @critical;
 }
 
 #battery {
-    color: @green;
+    color: @success;
+    border-bottom-color: @success;
     border-radius: 0 10px 10px 0;
-    border-bottom: 2px solid @green;
+}
+
+#battery.warning {
+    color: @accent-yellow;
+    border-bottom-color: @accent-yellow;
+}
+
+#battery.critical {
+    color: @critical;
+    border-bottom-color: @critical;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -130,19 +132,18 @@ button:hover {
 }
 
 #custom-vpn {
-    color: @lavender;
+    color: @accent-blue;
     border-radius: 15px;
-    padding-left: 6px;
-    padding-right: 6px;
+    padding: 0 6px;
 }
 
-#cava{
+#cava {
     font-size: 14px;
-    transition: none;
-    transition: 0.3s; 
+    transition: 0.3s;
 }
-#cava:hover{
-    color: @texthov;
-    background: @backgroundhov;
-    border-color: @borderhov;
+
+#cava:hover {
+    color: @foreground;
+    background: @accent-coral;
+    border-color: @accent-coral;
 }
