@@ -8,7 +8,8 @@
   "modules-left": [
     "clock",
     //"weather",    // requires weather module/plugin
-    "tray"
+    "tray",
+    "wlr/taskbar"
   ],
   "modules-center": [
     "hyprland/workspaces"
@@ -189,4 +190,27 @@
     "format": "󰐥",
     "on-click": "poweroff"
   }
+
+  //==================================================================
+  // Taskbar
+  //==================================================================
+"wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 14,
+    "icon-theme": "Numix-Circle",
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "ignore-list": [
+       "Alacritty"
+    ],
+    "app_ids-mapping": {
+      "firefoxdeveloperedition": "firefox-developer-edition"
+    },
+    "rewrite": {
+        "Firefox Web Browser": "Firefox",
+        "Foot Server": "Terminal"
+    }
+}
+
 }
