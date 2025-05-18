@@ -13,6 +13,14 @@
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
 
+  "hyprland/workspaces": {
+	"format": "{icon}",
+	"format-icons": {
+	"default": "○",
+	"default": "●"
+	}
+  },
+
   "battery": {
     "states": {
       "warning": 30,
