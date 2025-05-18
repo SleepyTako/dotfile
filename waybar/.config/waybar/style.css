@@ -189,17 +189,14 @@ window#waybar .modules-right {
     margin: 0 6px;
 }
 
-/* ~/.config/waybar/style.css */
-
-@import "colors.css";
-
 /*------------------------------------------------------------
  Group containers (left, center, right)
 ------------------------------------------------------------*/
 window#waybar .modules-left > widget > *,
 window#waybar .modules-center > widget > *,
 window#waybar .modules-right > widget > * {
-    margin: 0 2px;
+    margin: 0;
+}
 }
 
 /*------------------------------------------------------------
@@ -258,4 +255,3 @@ window#waybar .modules-right > widget > * {
     border-radius: 10px;
     margin: 0 8px;
 }
-
