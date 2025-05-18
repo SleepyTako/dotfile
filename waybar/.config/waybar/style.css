@@ -131,7 +131,7 @@
 #waybar #backlight { color: @success; }
 #waybar #cpu { color: @success; }
 #waybar #memory { color: @success; }
-#waybar #disk { color: @sucess; }
+#waybar #disk { color: @success; }
 #waybar #temperature { color: @success; }
 #waybar #battery { color: @success; }
 #waybar #battery.warning { color: @warning; }
