@@ -134,6 +134,7 @@
 #waybar #memory { color: @success; }
 #waybar #disk { color: @success; }
 #waybar #temperature { color: @success; }
+#waybar #temperature.critical { color: @critical; }
 #waybar #battery { color: @success; }
 #waybar #battery.warning { color: @warning; }
 #waybar #battery.critical { color: @critical; }
