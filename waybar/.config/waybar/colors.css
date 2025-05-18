@@ -18,9 +18,10 @@
 @define-color accent-magenta #C18AFF;    /* soft neon magenta */
 @define-color accent-yellow #F1BA4C;    /* sunny yellow from reflections */
 
-@define-color yellow #e3d530;    
-@define-color blue #003cc7;    
-@define-color red #de1e1e;
+@define-color pacman #ecdf42;    
+@define-color ghost #003cc7;    
+@define-color cherry #de1e1e;
+@define-color pellet #fffbcf;
 
 /* — Status colors — */
 @define-color success #40C8C0;    /* teal */
