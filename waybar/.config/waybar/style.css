@@ -126,9 +126,9 @@
 #waybar #clock { color: @success; }
 
 /* Workspace Group: Workspaces */
-#waybar #workspaces button.active { color: @pacman; }
 #waybar #workspaces button { color: @ghost; }
 #waybar #workspaces button.empty { color: @pellet; }
+#waybar #workspaces button.active { color: @pacman; }
 #waybar #workspaces button.urgent { color: @cherry; }
 
 /* Audio Group: Cava, Pulseaudio, Backlight */
