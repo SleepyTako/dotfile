@@ -136,11 +136,11 @@ button:hover {
     margin-bottom: 0px;
     border-radius: 10px;
     transition: none;
-    background: #32111C; 
-    color: #FEE5E4;
+    background: #05534d; 
+    color: #7dd8cc;
     border-bottom: 3px;
     border-style: solid;
-    border-color: #EF3946;
+    border-color: #16d4b5;
     transition: 0.3s; 
 }
 #cava:hover{
