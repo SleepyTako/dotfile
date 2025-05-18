@@ -2,33 +2,6 @@
 
 @import "colors.css";
 
-/*------------------------------------------------------------
- Group containers (left, center, right)
-------------------------------------------------------------*/
-window#waybar .modules-left,
-window#waybar .modules-center,
-window#waybar .modules-right {
-    background: @surface1;
-    border-radius: 8px;
-    padding: 4px 8px;
-    margin: 0 6px;
-}
-
-/* Highlight workspace group */
-window#waybar .modules-center {
-    background: @accent-magenta;
-}
-
-/* Normalize margins inside groups */
-window#waybar .modules-left > widget > *,
-window#waybar .modules-center > widget > *,
-window#waybar .modules-right > widget > * {
-    margin: 0 6px;
-}
-
-/*------------------------------------------------------------
- Global Styles
-------------------------------------------------------------*/
 * {
     border: none;
     font-family: "JetbrainsMono Nerd Font";
@@ -39,6 +12,12 @@ window#waybar .modules-right > widget > * {
 window#waybar {
     background: transparent;
     transition-duration: 0.1s;
+}
+
+#window {
+    margin: 8px;
+    padding-left: 8;
+    padding-right: 8;
 }
 
 button {
@@ -53,30 +32,27 @@ button:hover {
     border-top: 2px solid @accent-magenta;
 }
 
-/*------------------------------------------------------------
- Workspaces
-------------------------------------------------------------*/
 #workspaces button {
     padding: 0 4px;
-    background-color: transparent;
-    color: @foreground;
 }
-#workspaces button.persistent,
+
 #workspaces button.focused {
+    background-color: rgba(0, 0, 0, 0.3);
     color: @accent-magenta;
     border-top: 2px solid @accent-magenta;
 }
+
 #workspaces button.active {
-    color: @accent-teal;
-    border-top: 2px solid @accent-teal;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: @accent-magenta;
+    border-top: 2px solid @accent-magenta;
 }
+
 #workspaces button.urgent {
     background-color: @critical;
 }
 
-/*------------------------------------------------------------
- Module sizing & defaults
-------------------------------------------------------------*/
+/* Module Sizing */
 #pulseaudio,
 #cava,
 #mpris,
@@ -92,20 +68,22 @@ button:hover {
 #network,
 #mode,
 #scratchpad {
-  margin: 2px 6px;
-  padding: 0 6px;
+  margin: 2px 4px;
+  padding: 0 4px;
   border-bottom: 3px solid @border;
   border-radius: 5px;
   color: @foreground;
   background: @background;
 }
 
-/*------------------------------------------------------------
- Individual Module Styles
-------------------------------------------------------------*/
 #clock {
     color: @accent-coral;
     border-bottom-color: @accent-coral;
+}
+
+#clock.date {
+    color: @accent-magenta;
+    border-bottom-color: @accent-magenta;
 }
 
 #pulseaudio {
@@ -113,28 +91,18 @@ button:hover {
     border-bottom-color: @info;
 }
 
-#backlight {
-    color: @accent-orange;
-}
-
-#cpu {
-    color: @critical;
-    border-bottom-color: @critical;
-}
-
-#memory {
-    color: @accent-magenta;
-    border-bottom-color: @accent-magenta;
-}
-
-#disk {
+#network {
     color: @accent-yellow;
     border-bottom-color: @accent-yellow;
 }
 
-#temperature {
-    color: @info;
-    border-bottom-color: @info;
+#idle_inhibitor {
+    margin-right: 12px;
+    color: @success;
+}
+
+#idle_inhibitor.activated {
+    color: @critical;
 }
 
 #battery {
@@ -142,32 +110,36 @@ button:hover {
     border-bottom-color: @success;
     border-radius: 0 10px 10px 0;
 }
+
 #battery.warning {
-    color: @warning;
-    border-bottom-color: @warning;
+    color: @accent-yellow;
+    border-bottom-color: @accent-yellow;
 }
+
 #battery.critical {
     color: @critical;
     border-bottom-color: @critical;
 }
 
-#network {
-    color: @accent-yellow;
-    border-bottom-color: @accent-yellow;
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left>widget:first-child>#workspaces {
+    margin-left: 0;
 }
 
-#bluetooth {
-    color: @info;
-}
-#bluetooth.connected {
-    color: @success;
-}
-#bluetooth.disconnected {
-    color: @critical;
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right>widget:last-child>#workspaces {
+    margin-right: 0;
 }
 
-#custom/shutdown {
-    color: @critical;
+#custom-vpn {
+    color: @accent-blue;
+    border-radius: 15px;
+    padding: 0 6px;
+}
+
+#cava {
+    font-size: 14px;
+    transition: 0.3s;
 }
 
 #cava:hover {
