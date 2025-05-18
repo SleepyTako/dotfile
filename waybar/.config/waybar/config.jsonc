@@ -91,12 +91,13 @@
   },
 
   "backlight": {
-    "device": "intel_backlight",
-    "format": " {percentage}%",
-    "interval": 5,
-    "on-click": "brightnessctl set +5%",
-    "on-click-right": "brightnessctl set 5%",
-    "tooltip-format": "{percentage}%"
+    "device":           "intel_backlight",   // your sysfs folder
+    "interval":         5,
+    "format":           " {percent}%",     // use {percent}
+    "format-icons":     ["",""],          // optional: icon for low/high
+    "on-click":         "brightnessctl set +5%",
+    "on-click-right":   "brightnessctl set 5%",
+    "tooltip-format":   "{percent}%"
   },
 
   //========================================
