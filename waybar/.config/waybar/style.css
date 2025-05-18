@@ -14,64 +14,11 @@ window#waybar .modules-right {
     margin: 0 6px;
 }
 
-/* Highlight workspace group */
-window#waybar .modules-center {
-    background: @accent-magenta;
-}
-
-/* Normalize margins inside groups */
+/* Normalize widget spacing inside groups */
 window#waybar .modules-left > widget > *,
 window#waybar .modules-center > widget > *,
 window#waybar .modules-right > widget > * {
-    margin: 0 6px;
-}
-
-/*------------------------------------------------------------
- Global Styles
-------------------------------------------------------------*/
-* {
-    border: none;
-    font-family: "JetbrainsMono Nerd Font";
-    font-size: 16px;
-    min-height: 10px;
-}
-
-window#waybar {
-    background: transparent;
-    transition-duration: 0.1s;
-}
-
-button {
-    box-shadow: inset 0 -3px transparent;
-    border: none;
-    border-radius: 0;
-}
-
-button:hover {
-    background: inherit;
-    color: @accent-magenta;
-    border-top: 2px solid @accent-magenta;
-}
-
-/*------------------------------------------------------------
- Workspaces
-------------------------------------------------------------*/
-#workspaces button {
-    padding: 0 4px;
-    background-color: transparent;
-    color: @foreground;
-}
-#workspaces button.persistent,
-#workspaces button.focused {
-    color: @accent-magenta;
-    border-top: 2px solid @accent-magenta;
-}
-#workspaces button.active {
-    color: @accent-teal;
-    border-top: 2px solid @accent-teal;
-}
-#workspaces button.urgent {
-    background-color: @critical;
+    margin: 0;
 }
 
 /*------------------------------------------------------------
@@ -87,101 +34,19 @@ button:hover {
 #disk,
 #temperature,
 #backlight,
-#wireplumber,
-#tray,
 #network,
-#mode,
-#scratchpad {
-  margin: 2px 6px;
+#bluetooth,
+#custom\/shutdown {
   padding: 0 6px;
   border-bottom: 3px solid @border;
-  border-radius: 5px;
   color: @foreground;
   background: @background;
 }
 
 /*------------------------------------------------------------
- Individual Module Styles
-------------------------------------------------------------*/
-#clock {
-    color: @accent-coral;
-    border-bottom-color: @accent-coral;
-}
-
-#pulseaudio {
-    color: @info;
-    border-bottom-color: @info;
-}
-
-#backlight {
-    color: @accent-orange;
-}
-
-#cpu {
-    color: @critical;
-    border-bottom-color: @critical;
-}
-
-#memory {
-    color: @accent-magenta;
-    border-bottom-color: @accent-magenta;
-}
-
-#disk {
-    color: @accent-yellow;
-    border-bottom-color: @accent-yellow;
-}
-
-#temperature {
-    color: @info;
-    border-bottom-color: @info;
-}
-
-#battery {
-    color: @success;
-    border-bottom-color: @success;
-    border-radius: 0 10px 10px 0;
-}
-#battery.warning {
-    color: @warning;
-    border-bottom-color: @warning;
-}
-#battery.critical {
-    color: @critical;
-    border-bottom-color: @critical;
-}
-
-#network {
-    color: @accent-yellow;
-    border-bottom-color: @accent-yellow;
-}
-
-#bluetooth {
-    color: @info;
-}
-#bluetooth.connected {
-    color: @success;
-}
-#bluetooth.disconnected {
-    color: @critical;
-}
-
-#custom\/shutdown {
-    color: @critical;
-}
-
-#cava:hover {
-    color: @foreground;
-    background: @accent-coral;
-    border-color: @accent-coral;
-}
-
-
-/*------------------------------------------------------------
  Module grouping overrides
 ------------------------------------------------------------*/
-
-/* General Group: Clock, Weather, Tray */
+/* General Group: Clock, (Weather), Tray */
 #clock {
     border-radius: 10px 0 0 10px;
     margin-left: 8px;
@@ -193,22 +58,23 @@ button:hover {
     margin-right: 16px;
 }
 
-/* Workspace Group sits in its own container, no intra-group spacing needed */
+/* Workspace Group: Workspaces container margins */
 #workspaces {
     margin: 0 16px;
 }
 
-/* Audio Group: Cava, Pulseaudio, backlight */
+/* Audio Group: Cava, Pulseaudio, Backlight, MPRIS */
 #cava {
     border-radius: 10px 0 0 10px;
     margin-left: 16px;
     margin-right: 0;
 }
-#pulseaudio {
+#pulseaudio,
+#backlight {
     border-radius: 0;
     margin: 0;
 }
-#backlight {
+#mpris {
     border-radius: 0 10px 10px 0;
     margin-left: 0;
     margin-right: 16px;
@@ -239,69 +105,23 @@ button:hover {
     border-radius: 10px;
     margin-left: 16px;
     margin-right: 16px;
-}
-
-window#waybar .modules-left > widget > *,
-window#waybar .modules-center > widget > *,
-window#waybar .modules-right > widget > * {
-    margin: 0;
 }
 
 /*------------------------------------------------------------
- Module grouping overrides
+ Individual module styles
 ------------------------------------------------------------*/
-/* General Group: Clock, Weather, Tray */
-#clock {
-    border-radius: 10px 0 0 10px;
-    margin-left: 8px;
-    margin-right: 0;
-}
-#tray {
-    border-radius: 0 10px 10px 0;
-    margin-right: 8px;
-    margin-left: 0;
-}
-
-/* Audio Group: Cava, Pulseaudio, Backlight */
-#cava {
-    border-radius: 10px 0 0 10px;
-    margin-left: 8px;
-    margin-right: 0;
-}
-#pulseaudio {
-    border-radius: 0;
-    margin: 0;
-}
-#backlight {
-    border-radius: 0 10px 10px 0;
-    margin-right: 8px;
-    margin-left: 0;
-}
-
-/* Hardware Group: CPU, Memory, Disk, Temperature, Battery, Network, Bluetooth */
-#cpu {
-    border-radius: 10px 0 0 10px;
-    margin-left: 8px;
-    margin-right: 0;
-}
-#memory,
-#disk,
-#temperature,
-#battery,
-#network {
-    border-radius: 0;
-    margin: 0;
-}
-#bluetooth {
-    border-radius: 0 10px 10px 0;
-    margin-right: 8px;
-    margin-left: 0;
-}
-
-/* Power Group: Shutdown */
-#custom\/shutdown {
-    border-radius: 10px;
-    margin: 0 8px;
-}
-
-
+#clock { color: @accent-coral; border-bottom-color: @accent-coral; }
+#pulseaudio { color: @info; border-bottom-color: @info; }
+#backlight { color: @accent-orange; }
+#cpu { color: @critical; border-bottom-color: @critical; }
+#memory { color: @accent-magenta; border-bottom-color: @accent-magenta; }
+#disk { color: @accent-yellow; border-bottom-color: @accent-yellow; }
+#temperature { color: @info; border-bottom-color: @info; }
+#battery { color: @success; border-bottom-color: @success; }
+#battery.warning { color: @warning; border-bottom-color: @warning; }
+#battery.critical { color: @critical; border-bottom-color: @critical; }
+#network { color: @accent-yellow; border-bottom-color: @accent-yellow; }
+#bluetooth { color: @info; }
+#bluetooth.connected { color: @success; }
+#bluetooth.disconnected { color: @critical; }
+#cava:hover { color: @foreground; background: @accent-coral; border-color: @accent-coral; }
