@@ -4,7 +4,7 @@
   // Positions of Modules //
   "modules-left": ["cpu", "memory", "disk", "cava", "mpris"],
   "modules-center": ["hyprland/workspaces"],
-  "modules-right": ["network", "pulseaudio", "battery", "clock"],
+  "modules-right": ["network", "tray", "pulseaudio", "battery", "clock"],
 
   // Modules Formatting //
   "clock": {
@@ -14,7 +14,9 @@
 
   "hyprland/workspaces": {
     "format": "{icon}",
+    "tooltip": false,
     "format-icons": {
+      "urgent": "",
       "default": "○",
       "active": "●"
     }
@@ -105,5 +107,11 @@
     "interval": 30,
     "format": "  {percentage_used}%",
     "path": "/"
+  },
+
+  "tray": {
+    "icon-size": 18,
+    "spacing": 10
   }
+
 }
