@@ -188,7 +188,7 @@ window#waybar .modules-center > widget > *,
 window#waybar .modules-right > widget > * {
     margin: 0;
 }
-}
+
 
 /*------------------------------------------------------------
  Module grouping overrides
@@ -246,4 +246,3 @@ window#waybar .modules-right > widget > * {
     border-radius: 10px;
     margin: 0 8px;
 }
-
