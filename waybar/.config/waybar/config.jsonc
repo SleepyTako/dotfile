@@ -205,11 +205,11 @@
   // Music (MPRIS)
   //========================================
   "mpris": {
-    "format": "  {status_icon}",
+    "format": " {status_icon}",
     "interval": 1,
     "dynamic-len": 40,
     "status-icons": {
-      "playing": "⏸",
+      "playing": " ⏸",
       "paused": " ▶",
       "stopped": ""
       },
