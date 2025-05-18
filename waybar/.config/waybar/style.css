@@ -65,13 +65,13 @@
 /*------------------------------------------------------------
  Module grouping overrides
 ------------------------------------------------------------*/
-/* General Group: Clock → Tray */
+/* General Group: Clock → Taskbar */
 #waybar .modules-left > widget > #clock {
-    border-radius: 15px 0 0 15px;
+    border-radius: 15px;
     margin-left: 0px;
 }
 #waybar .modules-left > widget:last-child > #taskbar {
-    border-radius: 0 15px 15px 0;
+    border-radius: 15px;
     margin-right: 16px;
 }
 
