@@ -6,7 +6,7 @@
   // Module Positioning (Weather & Backlight disabled until installed)
   //========================================
   "modules-left": [
-    "clock",
+    //"clock",
     //"weather",    // requires weather module/plugin
     "tray"
   ],
