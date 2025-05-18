@@ -30,7 +30,7 @@
   ],
 
   //==================================================================
-  // General: Clock, Tray
+  // General: Clock, Taskbar
   //==================================================================
   "clock": {
     "format": "  {:%A - %B %d, %Y - %H:%M:%S}",
@@ -41,10 +41,23 @@
 //    "format": "{icon} {temp}°C",
 //    "tooltip-format": "{location}\n{description}"
 //  },
-  "tray": {
+  "wlr/taskbar": {
+    "format": "{icon}",
     "icon-size": 18,
-    "spacing": 10
-  },
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "ignore-list": [
+       "Alacritty"
+    ],
+    "app_ids-mapping": {
+      "firefoxdeveloperedition": "firefox-developer-edition"
+    },
+    "rewrite": {
+        "Firefox Web Browser": "Firefox",
+        "Foot Server": "Terminal"
+    }
+},
 
   //==================================================================
   // Workspace: Hyprland
@@ -189,28 +202,6 @@
   "custom/shutdown": {
     "format": "󰐥",
     "on-click": "poweroff"
-  },
-
-  //==================================================================
-  // Taskbar
-  //==================================================================
-"wlr/taskbar": {
-    "format": "{icon}",
-    "icon-size": 14,
-    "icon-theme": "Numix-Circle",
-    "tooltip-format": "{title}",
-    "on-click": "activate",
-    "on-click-middle": "close",
-    "ignore-list": [
-       "Alacritty"
-    ],
-    "app_ids-mapping": {
-      "firefoxdeveloperedition": "firefox-developer-edition"
-    },
-    "rewrite": {
-        "Firefox Web Browser": "Firefox",
-        "Foot Server": "Terminal"
-    }
-}
+  }
 
 }
