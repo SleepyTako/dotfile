@@ -69,10 +69,12 @@
 #waybar .modules-left > widget > #clock {
     border-radius: 15px;
     margin-left: 0px;
+    margin-right: 4px;
 }
 #waybar .modules-left > widget:last-child > #taskbar {
     border-radius: 15px;
     margin-right: 16px;
+    margin-left: 4px;
 }
 
 /* Workspace Group: Workspaces */
