@@ -56,11 +56,11 @@
 ------------------------------------------------------------*/
 /* General Group: Clock → Tray */
 #waybar .modules-left > widget > #clock {
-    border-radius: 10px 0 0 10px;
+    border-radius: 15px 0 0 15px;
     margin-left: 8px;
 }
 #waybar .modules-left > widget:last-child > #tray {
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 15px 15px 0;
     margin-right: 16px;
 }
 
@@ -71,7 +71,7 @@
 
 /* Audio Group: Cava, Pulseaudio, Backlight, MPRIS */
 #waybar .modules-right > widget > #cava {
-    border-radius: 10px 0 0 10px;
+    border-radius: 15px 0 0 15px;
     margin-left: 16px;
 }
 #waybar .modules-right > widget > #pulseaudio,
@@ -79,13 +79,13 @@
     border-radius: 0;
 }
 #waybar .modules-right > widget > #mpris {
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 15px 15px 0;
     margin-right: 4px;
 }
 
 /* Hardware Group: CPU → Bluetooth */
 #waybar .modules-right > widget > #cpu {
-    border-radius: 10px 0 0 10px;
+    border-radius: 15px 0 0 15px;
     margin-left: 4px;
 }
 #waybar .modules-right > widget > #memory,
@@ -96,14 +96,14 @@
     border-radius: 0;
 }
 #waybar .modules-right > widget > #bluetooth {
-    border-radius: 0 10px 10px 0;
-    margin-right: 8px;
+    border-radius: 0 15px 15px 0;
+    margin-right: 4px;
 }
 
 /* Power Group: Shutdown */
 #waybar .modules-right > widget > #custom\/shutdown {
-    border-radius: 10px;
-    margin-left: 16px;
+    border-radius: 15px;
+    margin-left: 4px;
     margin-right: 16px;
 }
 
