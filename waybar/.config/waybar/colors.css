@@ -1,6 +1,6 @@
 /* ~/.config/waybar/colors.css */
 
-@define-color {
+/*@define-color {
       /* — Base layers (dark “canvas” for your bar) — */
   background: #1B1F32;    /* very dark blue‑purple */
   background-alt: #2D3050;    /* mid‑dark slate */
@@ -23,4 +23,28 @@
   info: #89B4FA;    /* cool sky blue */
   warning: #F1BA4C;    /* yellow */
   critical: #FF7F7F;    /* coral red */
-}
+}*/
+
+@define-color background: #1B1F32;    /* very dark blue‑purple */
+@define-color background-alt: #2D3050;    /* mid‑dark slate */
+@define-color surface0: #3D3F63;    /* muted indigo */
+@define-color surface1: #505179;    /* softer violet */
+@define-color surface2: #666689;    /* light purple slate */
+
+@define-color border: #2A2D4E;    /* subtle divider */
+@define-color shadow: rgba(0,0,0,0.5);
+
+@define-color foreground: #E0E0EB;    /* soft off‑white for text */
+
+/* — Accent palette (pulled from hair highlights & neon lights) — */
+@define-color accent-teal: #40C8C0;    /* teal from hair highlights */
+@define-color accent-coral: #FF7F7F;    /* warm coral from neon window glow */
+@define-color accent-orange: #FFB86C;    /* cafe‑warm orange */
+@define-color accent-magenta: #C18AFF;    /* soft neon magenta */
+@define-color accent-yellow: #F1BA4C;    /* sunny yellow from reflections */
+
+/* — Status colors — */
+@define-color success: #40C8C0;    /* teal */
+@define-color info: #89B4FA;    /* cool sky blue */
+@define-color warning: #F1BA4C;    /* yellow */
+@define-color critical: #FF7F7F;    /* coral red */
