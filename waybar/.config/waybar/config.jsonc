@@ -205,7 +205,7 @@
   // Music (MPRIS)
   //========================================
   "mpris": {
-    "format": " {status_icon}", //Commented out {dynamic} to prevent title from appearing
+    "format": "   {status_icon}",
     "interval": 1,
     "dynamic-len": 40,
     "status-icons": {"playing": "⏸","paused": "▶","stopped": ""},
