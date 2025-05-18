@@ -136,7 +136,7 @@ button:hover {
     margin-bottom: 0px;
     border-radius: 10px;
     transition: none;
-    background: #05534d; 
+    background: @background; 
     color: #b3e7e0;
     border-bottom: 3px;
     border-style: solid;
