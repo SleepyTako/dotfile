@@ -62,8 +62,8 @@
     "format": "{icon}",
     "tooltip": false,
     "format-icons": {
-      "empty": "🍒",
-      "urgent": "",
+      "empty": "...",
+      "urgent": "🍒",
       "default": "ᗣ",
       "active": "ᗧ"
       //"empty": "○",
