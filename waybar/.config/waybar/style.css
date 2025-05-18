@@ -246,7 +246,6 @@ window#waybar .modules-center > widget > *,
 window#waybar .modules-right > widget > * {
     margin: 0;
 }
-}
 
 /*------------------------------------------------------------
  Module grouping overrides
