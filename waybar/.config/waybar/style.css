@@ -43,7 +43,7 @@
 ------------------------------------------------------------*/
 #waybar #workspaces,
 #waybar #pulseaudio,
-#waybar #tray,
+#waybar #taskbar,
 #waybar #cava,
 #waybar #mpris,
 #waybar #clock,
@@ -70,7 +70,7 @@
     border-radius: 15px 0 0 15px;
     margin-left: 0px;
 }
-#waybar .modules-left > widget:last-child > #tray {
+#waybar .modules-left > widget:last-child > #taskbar {
     border-radius: 0 15px 15px 0;
     margin-right: 16px;
 }
