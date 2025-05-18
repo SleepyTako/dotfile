@@ -159,7 +159,7 @@
     "format": " {status_icon} {dynamic}",
     "interval": 1,
     "dynamic-len": 40,
-    "status-icons": {"playing": "⏸","paused": "▶","stopped": ""},
+    "status-icons": {"playing": "⏸","paused": "▶▶","stopped": ""},
     //"dynamic-order": ["title","artist"],
     "ignored-players": ["firefox"]
   },
