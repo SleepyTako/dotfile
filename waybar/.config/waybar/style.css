@@ -32,6 +32,7 @@
  Module sizing & defaults
 ------------------------------------------------------------*/
 #waybar #pulseaudio,
+#waybar #tray,
 #waybar #cava,
 #waybar #mpris,
 #waybar #clock,
@@ -79,13 +80,13 @@
 }
 #waybar .modules-right > widget > #mpris {
     border-radius: 0 10px 10px 0;
-    margin-right: 16px;
+    margin-right: 8px;
 }
 
 /* Hardware Group: CPU → Bluetooth */
 #waybar .modules-right > widget > #cpu {
     border-radius: 10px 0 0 10px;
-    margin-left: 16px;
+    margin-left: 8px;
 }
 #waybar .modules-right > widget > #memory,
 #waybar .modules-right > widget > #disk,
@@ -96,7 +97,7 @@
 }
 #waybar .modules-right > widget > #bluetooth {
     border-radius: 0 10px 10px 0;
-    margin-right: 16px;
+    margin-right: 8px;
 }
 
 /* Power Group: Shutdown */
