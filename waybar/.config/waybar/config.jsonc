@@ -205,12 +205,17 @@
   // Music (MPRIS)
   //========================================
   "mpris": {
-    "format": "   {status_icon}",
+    "format": " {status_icon}",
     "interval": 1,
     "dynamic-len": 40,
-    "status-icons": {"playing": "⏸","paused": "▶","stopped": ""},
-    //"dynamic-order": ["title","artist"],
-    "ignored-players": ["firefox"]
+    "status-icons": {
+      "playing": "⏸",
+      "paused": "▶",
+      "stopped": ""
+      },
+    "ignored-players": [
+      "firefox"
+      ]
   },
 
   //========================================
