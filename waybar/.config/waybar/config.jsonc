@@ -173,7 +173,6 @@
     "max-length": 25
   },
   "network": {
-    "interface": "wlp2s0",
     "format": "{ifname}",
     "format-wifi": " ",
     "format-ethernet": "󰈁 ",
