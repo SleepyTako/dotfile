@@ -173,11 +173,13 @@
     "max-length": 25
   },
   "network": {
+    "interface": "wlp2s0",
     "format-wifi": " ",
     "format-ethernet": "󰈁 ",
     "format-linked": "{ifname} (No IP)  ",
     "format-disconnected": "󰖪 ",
-    "tooltip-format-wifi": "Signal Strength: {signalStrength}%"
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)  ",
+    "max-length": 50
   },
   "bluetooth": {
     "controller": "hci0",
