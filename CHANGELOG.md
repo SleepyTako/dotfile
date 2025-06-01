@@ -4,6 +4,7 @@ All notable changes to my dotfiles will be listed here, starting at changes sinc
 ### Unreleased
 BREAKING CHANGES
 
+- sadasdsd
 
 ## Fixes
 Fix crash on invalid formattime format string (By: luca3s)
