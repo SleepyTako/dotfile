@@ -5,3 +5,4 @@ All notable changes to my dotfiles will be listed here, starting at changes sinc
 
 ### Features
 - Installed Visual Studio Code
+- Installed eww-git
