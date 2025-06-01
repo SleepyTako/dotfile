@@ -5,7 +5,7 @@ All notable changes to my dotfiles will be listed here, starting at changes sinc
 BREAKING CHANGES
 
 - sadasdsd
-
+--- 
 ## Fixes
 Fix crash on invalid formattime format string (By: luca3s)
 Fix crash on NaN or infinite graph value (By: luca3s)
