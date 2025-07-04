@@ -1,7 +1,7 @@
 #!/bin/bash
 
-eww="eww -c $HOME/.config/eww/mybar"
-imgdir="$HOME/.config/eww/mybar/images"
+eww="eww -c $HOME/.config/eww"
+imgdir="$HOME/.config/eww/images"
 mkdir -p "$imgdir"
 
 player="spotify"
