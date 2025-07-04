@@ -27,9 +27,9 @@
                 :width "400px"
                 :height "100px"
                 :anchor "top right")
-    :stacking "top"
+    :stacking "fg"
     :windowtype "dock"
-    :layer "top"
+    :layer "overlay"
     :exclusive false
     :focusable false
     (media_player))
