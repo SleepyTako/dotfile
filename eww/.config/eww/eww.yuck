@@ -21,6 +21,7 @@
         (label :text length)))))
 
   (defwindow media_player
+    :monitor 0
     :geometry (geometry
                 :x "20px"
                 :y "60px"
