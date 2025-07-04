@@ -1,1 +1,18 @@
+(defwidget spotify-popup []
+  (box :class "spotify-popup" :orientation "vertical"
+    (image :class "album-art" :path (get spotify-data "art"))
+    (label :class "title" :text (get spotify-data "title"))
+    (label :class "artist" :text (get spotify-data "artist"))
+    (box :class "controls"
+      (button :onclick "playerctl previous" "⏮")
+      (button :onclick "playerctl play-pause" "⏯")
+      (button :onclick "playerctl next" "⏭")
+    )
+    (box :class "progress"
+      (label :text (get spotify-data "position"))
+      (progress :value (get spotify-data "progress") :max "100")
+      (label :text (get spotify-data "duration"))
+    )
+  )
+)
 
