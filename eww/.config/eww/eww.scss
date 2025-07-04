@@ -1,0 +1,37 @@
+.spotify-popup {
+  background-color: #1e1e2e;
+  border-radius: 12px;
+  padding: 10px;
+  min-width: 300px;
+  font-family: sans-serif;
+
+  .album-art {
+    min-height: 150px;
+    min-width: 150px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+  }
+
+  .title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 5px;
+  }
+
+  .artist {
+    font-size: 14px;
+    color: #bbbbbb;
+    margin-bottom: 10px;
+  }
+
+  .controls {
+    spacing: 10px;
+    margin: 5px 0;
+  }
+
+  .progress {
+    spacing: 5px;
+    margin-top: 5px;
+    align: center;
+  }
+}
