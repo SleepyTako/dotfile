@@ -1,4 +1,6 @@
 
+(deflisten media_data "scripts/spotify_data.sh")
+
 (defpoll media_info :interval "2s" "scripts/spotify_data.sh")
 
 (defwidget media_player []
@@ -35,9 +37,3 @@
     :focusable false
     (media_player))
 
-  (defvar cover "images/music.png")
-  (defvar artist_parsed "No artist")
-  (defvar title_parsed "No title")
-  (defvar position 0)
-  (defvar length 100)
-  (deflisten media_data "scripts/spotify_data.sh")
