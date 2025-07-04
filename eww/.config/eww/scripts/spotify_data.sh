@@ -32,3 +32,10 @@ jq -n \
     position: $position,
     progress: $progress
   }'
+  
+eww update \
+  title_parsed="'$TITLE'" \
+  artist_parsed="'$ARTIST'" \
+  cover="'$ART'" \
+  position=$POSITION \
+  length=$DURATION
