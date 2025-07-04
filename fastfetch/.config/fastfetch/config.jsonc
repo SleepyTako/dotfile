@@ -13,7 +13,7 @@ fastfetch --config hyde/*.jsonc
     "type": "kitty-direct",
     /*"source": "~/.config/fastfetch/logo/miku_float.gif",*/
     /*"source": "~/.config/fastfetch/logo/estarosa.png",*/
-    "source": "~/.config/fastfetch/logo/Porygon.png",
+    "source": "~/.config/fastfetch/logo/porygon.png",
     "width": 35,
     "height": 15
   },
