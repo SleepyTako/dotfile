@@ -1,71 +1,29 @@
-
-@import "./colors.scss";
-
-.music {
-  background-color: $bg0;
-  color: $fg;
-  padding: 16px;
+.media-box {
+  padding: 10px;
+  background-color: $right_bg;
   border-radius: 12px;
-  font-family: "JetBrains Mono", monospace;
   min-width: 300px;
-
-  &__art {
-    min-width: 96px;
-    min-height: 96px;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    object-fit: cover;
-  }
-
-  &__title {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 4px;
-    color: $fg;
-  }
-
-  &__artist {
-    font-size: 14px;
-    color: $muted;
-    margin-bottom: 12px;
-  }
-
-  &__controls {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 10px;
-
-    button {
-      background-color: $bg3;
-      border-radius: 8px;
-      padding: 6px;
-      color: $fg;
-      font-size: 16px;
-    }
-
-    button:hover {
-      background-color: $accent;
-    }
-  }
-
-  &__progress {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 12px;
-  }
-
-  &__bar {
-    flex-grow: 1;
-    height: 6px;
-    margin: 0 8px;
-    border-radius: 3px;
-    background-color: $bg2;
-    accent-color: $accent;
-  }
-
-  &__time {
-    color: $fg;
-  }
 }
 
+.media-cover {
+  border-radius: 8px;
+  margin-right: 8px;
+}
+
+.media-title {
+  font-weight: bold;
+  color: $color6;
+  font-size: 16px;
+}
+
+.media-artist {
+  color: $color12;
+  font-size: 14px;
+}
+
+.media-progress {
+  min-height: 4px;
+  background-color: $color8;
+  color: $color14;
+  border-radius: 6px;
+}
