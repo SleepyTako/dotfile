@@ -28,3 +28,5 @@
   :monitor 0
   (spotify-popup)
 )
+
+(label :text "Hello Style!" :class "test-label")
