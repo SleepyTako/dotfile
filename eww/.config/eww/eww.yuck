@@ -42,5 +42,5 @@
     :artist artist
     :duration duration
     :position position
-    :progress progress)
+    :progress progress))
 
