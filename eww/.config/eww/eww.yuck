@@ -20,6 +20,20 @@
         (progress :value position :max length :class "media-progress")
         (label :text length)))))
 
+  (defwindow media_player
+    :geometry (geometry
+                :x "20px"
+                :y "60px"
+                :width "400px"
+                :height "100px"
+                :anchor "top right")
+    :stacking "top"
+    :windowtype "dock"
+    :layer "top"
+    :exclusive false
+    :focusable false
+    (media_player))
+
   (defvar cover "images/music.png")
   (defvar artist_parsed "No artist")
   (defvar title_parsed "No title")
