@@ -1,3 +1,7 @@
+
+(defpoll spotify-data :interval "1s" "~/.config/eww/scripts/spotify_data.sh")
+
+
 (defwidget spotify-popup []
   (box :class "spotify-popup" :orientation "vertical"
     (image :class "album-art" :path (get spotify-data "art"))
@@ -16,4 +20,12 @@
   )
 )
 
-(defpoll spotify-data :interval "1s" "~/.config/eww/scripts/spotify_data.sh")
+(window
+  :name "spotify-popup"
+  :geometry (geometry :x "center" :y "center" :width "360px" :height "auto")
+  :anchor "top right"
+  :exclusive false
+  :stacking "fg"
+  :monitor 0
+  (spotify-popup)
+)
