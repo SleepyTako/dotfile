@@ -1,37 +1,66 @@
 .spotify-popup {
   background-color: #1e1e2e;
-  color: #ffffff;
-  padding: 12px;
-  border-radius: 10px;
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  font-family: sans-serif;
 
   .test-label {
     color: red;
     font-size: 20px;
   }
 
+  .album-art {
+    min-width: 150px;
+    min-height: 150px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+
   .title {
     font-size: 18px;
     font-weight: bold;
+    margin-bottom: 5px;
   }
 
   .artist {
     font-size: 14px;
     color: #bbbbbb;
+    margin-bottom: 10px;
+  }
+
+  .controls {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
   }
 
   .controls button {
-    background-color: #444;
+    background-color: #333;
     border-radius: 6px;
-    padding: 6px;
-    margin: 2px;
+    padding: 6px 12px;
+    font-size: 16px;
     color: white;
+    border: none;
+  }
+
+  .controls button:hover {
+    background-color: #555;
   }
 
   .progress {
     margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   progress {
+    flex-grow: 1;
+    height: 6px;
+    border-radius: 4px;
+    background-color: #444;
     accent-color: #88c0d0;
+    margin: 0 8px;
   }
 }
