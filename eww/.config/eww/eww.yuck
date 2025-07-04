@@ -21,7 +21,7 @@
 )
 
 (defwindow spotify-popup
-  :geometry (geometry :x "center" :y "center" :width "360px" :height "auto")
+  :geometry (geometry :x "center" :y "center" :width "360px" :height "360px")
   :anchor "top right"
   :exclusive false
   :stacking "fg"
