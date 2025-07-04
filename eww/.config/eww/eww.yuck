@@ -1,5 +1,5 @@
 
-(defpoll player-meta :interval "1s" "~/.config/eww/scripts/spotify_data.sh")
+(defpoll media_info :interval "2s" "scripts/spotify_data.sh")
 
 (defwidget media_player []
   (box
