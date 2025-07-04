@@ -1,30 +1,21 @@
 
 (defpoll player-meta :interval "1s" "~/.config/eww/scripts/spotify_data.sh")
 
-(defwidget spotify []
-  (box :class "music"
-    (image :class "music__art" :path (get player-meta "artUrl") :image-style "contain")
-    (label :class "music__title" :text (get player-meta "title"))
-    (label :class "music__artist" :text (get player-meta "artist"))
-    (box :class "music__controls"
-      (button :onclick "playerctl previous" "󰒮")
-      (button :onclick "playerctl play-pause" "󰐊")
-      (button :onclick "playerctl next" "󰒭")
-    )
-    (box :class "music__progress"
-      (label :class "music__time" :text (get player-meta "position"))
-      (progress :class "music__bar" :value (get player-meta "progress") :max "100")
-      (label :class "music__time" :text (get player-meta "duration"))
-    )
-  )
-)
-
-(defwindow spotify-popup
-  :monitor 0
-  :anchor "top right"
-  :geometry (geometry :x "0px" :y "30px" :width "350px" :height "350px")
-  :stacking "fg"
-  :exclusive false
-  (spotify)
-)
-
+(defwidget media_player []
+  (box
+    :class "media-box"
+    :orientation "horizontal"
+    :spacing 10
+    :space-evenly false
+    (image :class "media-cover" :path cover :image-width "64px" :image-height "64px")
+    (box :orientation "vertical" :space-evenly false :spacing 4
+      (label :class "media-title" :text title_parsed)
+      (label :class "media-artist" :text artist_parsed)
+      (box :orientation "horizontal" :space-evenly false :spacing 6
+        (button :onclick "playerctl previous" :label "⏮")
+        (button :onclick "playerctl play-pause" :label "⏯")
+        (button :onclick "playerctl next" :label "⏭"))
+      (box :orientation "horizontal" :space-evenly false :spacing 6
+        (label :text position)
+        (progress :value position :max length :class "media-progress")
+        (label :text length)))))
