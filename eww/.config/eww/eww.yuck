@@ -34,7 +34,7 @@
   :exclusive false
   :focusable false
   (media_player
-    :art art
+    :art cover
     :title title
     :artist artist
     :duration duration
