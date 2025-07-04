@@ -1,53 +1,71 @@
-// Colors
-$background: #1e1e2e;
-$foreground: #eeeeee;
-$muted: #bbbbbb;
-$accent: #88c0d0;
-$button-bg: #2c2c3a;
-$button-hover: #3c3c4a;
 
-// Reset GTK junk
-* {
-  all: unset;
-  font-family: "JetBrains Mono", sans-serif;
-  font-size: 14px;
-}
+@import "./colors.scss";
 
-// Style root window (optional)
-window {
-  background-color: transparent;
-}
-
-// Widget styling
-.spotify-popup {
-  background-color: $background;
-  color: $foreground;
+.music {
+  background-color: $bg0;
+  color: $fg;
   padding: 16px;
   border-radius: 12px;
   min-width: 300px;
+  font-family: "JetBrains Mono", sans-serif;
 
-  .title {
+  &-art {
+    min-width: 96px;
+    min-height: 96px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    object-fit: cover;
+  }
+
+  &-title {
     font-size: 18px;
     font-weight: bold;
+    color: $fg;
   }
 
-  .artist {
+  &-artist {
     font-size: 14px;
     color: $muted;
+    margin-bottom: 10px;
   }
 
-  .controls button {
-    background-color: $button-bg;
-    border-radius: 8px;
-    padding: 6px 12px;
-    color: $foreground;
+  &-controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+
+    button {
+      background-color: $bg3;
+      border-radius: 8px;
+      padding: 6px 12px;
+      font-size: 16px;
+      color: $fg;
+      border: none;
+    }
+
+    button:hover {
+      background-color: $accent;
+    }
   }
 
-  .controls button:hover {
-    background-color: $button-hover;
+  &-progress {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
   }
 
-  progress {
+  &-bar {
+    flex-grow: 1;
+    height: 6px;
+    border-radius: 4px;
+    background-color: $bg2;
     accent-color: $accent;
+    margin: 0 8px;
+  }
+
+  &-time {
+    font-size: 12px;
+    color: $fg;
   }
 }
