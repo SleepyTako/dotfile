@@ -6,6 +6,7 @@
 (defvar position 0)
 (defvar length 100)
 (defvar progress 0)
+(defvar duration "00:00")
 
 (defpoll media_updater
   :interval "2s"
