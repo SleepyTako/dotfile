@@ -99,7 +99,7 @@
   "exec": "echo '󰓃'",
   "on-click": "eww open --toggle spotify-popup",
   "interval": 10
-  }
+  },
 
   "cava": {
     "cava_config": "/home/Squeaks/.config/cava/config",
