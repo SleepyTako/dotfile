@@ -1,66 +1,53 @@
+// Colors
+$background: #1e1e2e;
+$foreground: #eeeeee;
+$muted: #bbbbbb;
+$accent: #88c0d0;
+$button-bg: #2c2c3a;
+$button-hover: #3c3c4a;
+
+// Reset GTK junk
+* {
+  all: unset;
+  font-family: "JetBrains Mono", sans-serif;
+  font-size: 14px;
+}
+
+// Style root window (optional)
+window {
+  background-color: transparent;
+}
+
+// Widget styling
 .spotify-popup {
-  background-color: #1e1e2e;
-  color: white;
-  padding: 20px;
+  background-color: $background;
+  color: $foreground;
+  padding: 16px;
   border-radius: 12px;
-  font-family: sans-serif;
-
-  .test-label {
-    color: red;
-    font-size: 20px;
-  }
-
-  .album-art {
-    min-width: 150px;
-    min-height: 150px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-  }
+  min-width: 300px;
 
   .title {
     font-size: 18px;
     font-weight: bold;
-    margin-bottom: 5px;
   }
 
   .artist {
     font-size: 14px;
-    color: #bbbbbb;
-    margin-bottom: 10px;
-  }
-
-  .controls {
-    display: flex;
-    gap: 8px;
-    margin-top: 10px;
+    color: $muted;
   }
 
   .controls button {
-    background-color: #333;
-    border-radius: 6px;
+    background-color: $button-bg;
+    border-radius: 8px;
     padding: 6px 12px;
-    font-size: 16px;
-    color: white;
-    border: none;
+    color: $foreground;
   }
 
   .controls button:hover {
-    background-color: #555;
-  }
-
-  .progress {
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    background-color: $button-hover;
   }
 
   progress {
-    flex-grow: 1;
-    height: 6px;
-    border-radius: 4px;
-    background-color: #444;
-    accent-color: #88c0d0;
-    margin: 0 8px;
+    accent-color: $accent;
   }
 }
