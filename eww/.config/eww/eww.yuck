@@ -1,39 +1,40 @@
 
 (deflisten media_data "scripts/spotify_data.sh")
 
-(defpoll media_info :interval "2s" "scripts/spotify_data.sh")
+(defvar art      "images/music.png")
+(defvar title    "No title")
+(defvar artist   "No artist")
+(defvar duration "00:00")
+(defvar position "00:00")
+(defvar progress 0)
 
-(defwidget media_player []
-  (box
-    :class "media-box"
-    :orientation "horizontal"
-    :spacing 10
-    :space-evenly false
+(defpoll media_info
+  :interval "2s"
+  :format "json"
+  "scripts/spotify_data.sh")
+
+(defwidget media_player [art title artist duration position progress]
+  (box :class "media-box" :orientation "horizontal" :spacing 10
     (image :class "media-cover" :path art :image-width "64px" :image-height "64px")
-    (box :orientation "vertical" :space-evenly false :spacing 4
-      (label :class "media-title" :text title)
+    (box :orientation "vertical" :spacing 4
+      (label :class "media-title"  :text title)
       (label :class "media-artist" :text artist)
-      (box :orientation "horizontal" :space-evenly false :spacing 6
-        (button :onclick "playerctl previous" :label "⏮")
+      (box :orientation "horizontal" :spacing 6
+        (button :onclick "playerctl previous"   :label "⏮")
         (button :onclick "playerctl play-pause" :label "⏯")
-        (button :onclick "playerctl next" :label "⏭"))
-      (box :orientation "horizontal" :space-evenly false :spacing 6
+        (button :onclick "playerctl next"       :label "⏭"))
+      (box :orientation "horizontal" :spacing 6
         (label :text position)
-        (progress :value position :max length :class "media-progress")
-        (label :text length)))))
+        (progress :value progress :max 100 :class "media-progress")
+        (label :text duration)))))
 
-  (defwindow media_player
-    :monitor 0
-    :geometry (geometry
-                :x "20px"
-                :y "60px"
-                :width "400px"
-                :height "100px"
-                :anchor "top right")
-    :stacking "fg"
-    :windowtype "dock"
-    :layer "overlay"
-    :exclusive false
-    :focusable false
-    (media_player))
+(defwindow media_player
+  :monitor 0
+  :geometry (geometry :x "20px" :y "60px" :width "400px" :height "100px" :anchor "top right")
+  :stacking "fg"
+  :windowtype "dock"
+  :layer "overlay"
+  :exclusive false
+  :focusable false
+  (media_player art title artist duration position progress))
 
