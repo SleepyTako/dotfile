@@ -20,8 +20,7 @@
   )
 )
 
-(defwindow
-  :name "spotify-popup"
+(defwindow spotify-popup
   :geometry (geometry :x "center" :y "center" :width "360px" :height "auto")
   :anchor "top right"
   :exclusive false
