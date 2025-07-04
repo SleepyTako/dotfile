@@ -9,7 +9,7 @@
   font-family: "JetBrains Mono", monospace;
   min-width: 300px;
 
-  .art {
+  &__art {
     min-width: 96px;
     min-height: 96px;
     border-radius: 8px;
@@ -17,20 +17,20 @@
     object-fit: cover;
   }
 
-  .title {
+  &__title {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 4px;
     color: $fg;
   }
 
-  .artist {
+  &__artist {
     font-size: 14px;
     color: $muted;
     margin-bottom: 12px;
   }
 
-  .controls {
+  &__controls {
     display: flex;
     gap: 10px;
     margin-bottom: 10px;
@@ -48,14 +48,14 @@
     }
   }
 
-  .progress {
+  &__progress {
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: 12px;
   }
 
-  .bar {
+  &__bar {
     flex-grow: 1;
     height: 6px;
     margin: 0 8px;
@@ -64,7 +64,7 @@
     accent-color: $accent;
   }
 
-  .time {
+  &__time {
     color: $fg;
   }
 }
