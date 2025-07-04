@@ -1,24 +1,21 @@
 
-(deflisten media_data "scripts/spotify_data.sh")
+(defvar cover "images/music.png")
+(defvar title_parsed "No title")
+(defvar artist_parsed "No artist")
+(defvar media_status "")
+(defvar position 0)
+(defvar length 100)
 
-(defvar art      "images/music.png")
-(defvar title    "No title")
-(defvar artist   "No artist")
-(defvar duration "00:00")
-(defvar position "00:00")
-(defvar progress 0)
-
-(defpoll media_info
+(defpoll media_updater
   :interval "2s"
-  :format "json"
-  "scripts/spotify_data.sh")
+  "scripts/media_info.sh")
 
 (defwidget media_player [art title artist duration position progress]
   (box :class "media-box" :orientation "horizontal" :spacing 10
-    (image :class "media-cover" :path art :image-width "64px" :image-height "64px")
+    (image :class "media-cover" :path cover :tooltip "${title_parsed} by ${artist_parsed}")
     (box :orientation "vertical" :spacing 4
-      (label :class "media-title"  :text title)
-      (label :class "media-artist" :text artist)
+      (label :class "media-title"  :text title_parsed)
+      (label :class "media-artist" :text artist_parsed)
       (box :orientation "horizontal" :spacing 6
         (button :onclick "playerctl previous"   :label "⏮")
         (button :onclick "playerctl play-pause" :label "⏯")
