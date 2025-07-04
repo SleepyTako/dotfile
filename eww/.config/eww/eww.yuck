@@ -16,3 +16,4 @@
   )
 )
 
+(defpoll spotify-data :interval "1s" "~/.config/eww/scripts/spotify_data.sh")
