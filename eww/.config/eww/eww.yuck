@@ -36,5 +36,11 @@
   :layer "overlay"
   :exclusive false
   :focusable false
-  (media_player art title artist duration position progress))
+  (media_player
+    :art art
+    :title title
+    :artist artist
+    :duration duration
+    :position position
+    :progress progress)
 
