@@ -9,10 +9,10 @@
     :orientation "horizontal"
     :spacing 10
     :space-evenly false
-    (image :class "media-cover" :path cover :image-width "64px" :image-height "64px")
+    (image :class "media-cover" :path art :image-width "64px" :image-height "64px")
     (box :orientation "vertical" :space-evenly false :spacing 4
-      (label :class "media-title" :text title_parsed)
-      (label :class "media-artist" :text artist_parsed)
+      (label :class "media-title" :text title)
+      (label :class "media-artist" :text artist)
       (box :orientation "horizontal" :space-evenly false :spacing 6
         (button :onclick "playerctl previous" :label "⏮")
         (button :onclick "playerctl play-pause" :label "⏯")
