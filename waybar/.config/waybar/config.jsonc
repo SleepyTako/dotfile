@@ -112,7 +112,7 @@
     "noise_reduction": 0.77,
     "input_delay": 0,
     "format-icons": ["▁","▂","▃","▄","▅","▆","▇","█"],
-    "actions": { "on-click-right": "mode" }
+    "actions": { "on-click-right": "eww open --toggle spotify-popup" }
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",
