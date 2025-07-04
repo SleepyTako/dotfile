@@ -15,6 +15,7 @@
   ],
   "modules-right": [
     "mpris",
+    "cava",
     "custom/cava",
     "pulseaudio",
     "backlight",
