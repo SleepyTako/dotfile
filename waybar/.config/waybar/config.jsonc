@@ -119,7 +119,7 @@
     "noise_reduction": 0.77,
     "input_delay": 0,
     "format-icons": ["▁","▂","▃","▄","▅","▆","▇","█"],
-    "actions": { "mode" }
+    "actions": { "on-click-right": "mode" }
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",
