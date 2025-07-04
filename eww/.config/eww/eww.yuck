@@ -5,6 +5,7 @@
 (defvar media_status "")
 (defvar position 0)
 (defvar length 100)
+(defvar progress 0)
 
 (defpoll media_updater
   :interval "2s"
