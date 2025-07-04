@@ -36,8 +36,5 @@
   (media_player
     :art cover
     :title title_parsed
-    :artist artist_parsed
-    :duration duration
-    :position position
-    :progress progress))
+    :artist artist_parsed))
 
