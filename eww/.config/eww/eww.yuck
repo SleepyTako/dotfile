@@ -133,6 +133,26 @@
           )))
       ))
 
+(defwindow cava_overlay
+  :geometry (geometry
+    :x "1600px"     ;; Adjust this to match where #cava shows
+    :y "6px"        ;; Just below the top bar usually
+    :width "120px"  ;; Approx width of your Cava module
+    :height "30px")
+  :stacking "fg"
+  :windowtype "dock"
+  :wm-ignore false
+  (eventbox
+    :cursor "pointer"
+    (box
+      :onclick "eww open music"
+      (label :text "        ") ;; Invisible space, just for clickable area
+    )
+  )
+)
+
+
+
 (defwidget music []     
     (eventbox 
       :onhover "${eww} update music_reveal=true"
