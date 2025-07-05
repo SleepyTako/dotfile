@@ -16,7 +16,6 @@
   "modules-right": [
     "mpris",
     "cava",
-    "custom/cava",
     "pulseaudio",
     "backlight",
     "cpu",
@@ -95,12 +94,6 @@
   //==================================================================
   // Audio: Cava (visualizer), Pulseaudio (volume)
   //==================================================================
-
-  "custom/cava": {
-  "format": "󰓃󰓃󰓃󰓃󰓃󰓃󰓃󰓃󰓃󰓃󰓃󰓃󰓃",
-  "on-click": "eww open --toggle music",
-  "interval": 10
-  },
 
   "cava": {
     "cava_config": "/home/Squeaks/.config/cava/config",
