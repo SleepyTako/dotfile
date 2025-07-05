@@ -24,8 +24,8 @@
   :monitor 0
   :geometry
     (geometry
-      :x "1000px"
-      :y "50px"
+      :x "1500px"
+      :y "20px"
       :width "415px"
       :height "200px")
     :stacking "fg"
