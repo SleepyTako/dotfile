@@ -30,7 +30,7 @@ update_cover () {
 	elif [[ `echo $newimg | grep -c "file://"` -gt 0 ]]
 	then
 		cp "`echo $newimg | sed 's/file:\/\///g'`" "$imgdir/currmedia_fullsize.png"
-		magick convert "$imgdir/currmedia_fullsize.png" -resize 130x130 "$imgdir/currmedia.png"
+		magick "$imgdir/currmedia_fullsize.png" -resize 130x130 "$imgdir/currmedia.png"
 		echo "Image is a file, succesfully copied"
 	else
 		echo "Image is an url, trying to download..."
@@ -38,7 +38,7 @@ update_cover () {
 		if [[ $? -eq 0 ]]
 		then
 			cp "/tmp/currmedia.png" "$imgdir/currmedia_fullsize.png"
-			magick convert "/tmp/currmedia.png" -resize 130x130 "$imgdir/currmedia.png"
+			magick "/tmp/currmedia.png" -resize 130x130 "$imgdir/currmedia.png"
 			#cp /tmp/currmedia.png "$imgdir/currmedia.png"
 			echo "Image succesfully downloaded"
 		else
