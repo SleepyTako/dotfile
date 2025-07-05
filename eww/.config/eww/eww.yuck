@@ -136,8 +136,8 @@
 (defwindow cava_overlay
   :monitor 0
   :geometry (geometry
-    :x "1600px"     ;; Adjust this to match where #cava shows
-    :y "6px"        ;; Just below the top bar usually
+    :x "1000px"     ;; Adjust this to match where #cava shows
+    :y "1px"        ;; Just below the top bar usually
     :width "120px"  ;; Approx width of your Cava module
     :height "30px")
   :stacking "fg"
