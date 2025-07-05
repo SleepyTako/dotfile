@@ -64,6 +64,7 @@
 
 ;; Music window
 (defwindow music
+  :monitor 0
   :geometry
     (geometry
       :x "40px"
