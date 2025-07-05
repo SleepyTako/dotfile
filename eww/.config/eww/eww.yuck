@@ -25,7 +25,7 @@
   :geometry
     (geometry
       :x "1500px"
-      :y "10px"
+      :y "5px"
       :width "415px"
       :height "200px")
     :stacking "fg"
