@@ -134,6 +134,7 @@
       ))
 
 (defwindow cava_overlay
+  :monitor 0
   :geometry (geometry
     :x "1600px"     ;; Adjust this to match where #cava shows
     :y "6px"        ;; Just below the top bar usually
