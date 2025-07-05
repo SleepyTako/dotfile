@@ -108,35 +108,35 @@
             (eventbox
               :cursor "pointer"
               (button
-                :onclick "scripts/media_control --prev"
+                :onclick "scripts/media_control.sh --prev"
                 :class "nextprev_popup"
                 :tooltip "Previous"
                 ""))
             (eventbox
               :cursor "pointer"
               (button
-                :onclick "scripts/media_control --move -5"
+                :onclick "scripts/media_control.sh --move -5"
                 :class "move_popup"
                 :tooltip "-5 seconds"
                 ""))
             (eventbox
               :cursor "pointer"
               (button
-                :onclick "scripts/media_control --toggle"
+                :onclick "scripts/media_control.sh --toggle"
                 :class "playpause_popup"
                 :tooltip "Play/Pause"
                 media_status))
             (eventbox
               :cursor "pointer"
               (button
-                :onclick "scripts/media_control --move +5"
+                :onclick "scripts/media_control.sh --move +5"
                 :class "move_popup"
                 :tooltip "+5 seconds"
                 ""))
             (eventbox
               :cursor "pointer"
               (button
-                :onclick "scripts/media_control --next"
+                :onclick "scripts/media_control.sh --next"
                 :class "nextprev_popup"
                 :tooltip "Next"
                 ""))
@@ -157,7 +157,7 @@
             :max length
             :value position
             :orientation "h"
-            :onchange "scripts/media_control --seek {} ${media_bar_is_active_popup}"
+            :onchange "scripts/media_control.sh --seek {} ${media_bar_is_active_popup}"
           )))
       ))
 
@@ -227,21 +227,21 @@
                   :cursor "pointer"
                   (button 
                     :class "prev_button"
-                    :onclick "scripts/media_control --prev" 
+                    :onclick "scripts/media_control.sh --prev" 
                     :tooltip "Previous"
                     ""))
                 (eventbox 
                   :cursor "pointer"
                   (button 
                     :class "toggle_button"
-                    :onclick "scripts/media_control --toggle" 
+                    :onclick "scripts/media_control.sh --toggle" 
                     :tooltip "Play/Pause"
                     "${media_status}"))
                 (eventbox
                   :cursor "pointer"
                   (button 
                     :class "next_button"
-                    :onclick "scripts/media_control --next" 
+                    :onclick "scripts/media_control.sh --next" 
                     :tooltip "Next"
                     "")))))
           (box 
@@ -261,5 +261,5 @@
                 :value position
                 :orientation "h"
                 :tooltip "Seek"
-                :onchange "scripts/media_control --seek {} ${media_bar_is_active}"
+                :onchange "scripts/media_control.sh --seek {} ${media_bar_is_active}"
                 )))))))
