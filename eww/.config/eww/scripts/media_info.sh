@@ -1,5 +1,5 @@
 #!/bin/sh
-
+#Test
 # Selects player based on if they're playing or if they have a cover
 # Note: Being played takes priority
 select_player () {
