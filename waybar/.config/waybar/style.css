@@ -65,20 +65,7 @@
 /* Cava Overlay */
 #waybar #custom-cava {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 5;
-  background: transparent;
-  cursor: pointer;
-  pointer-events: all;
-  margin: 0;
-  padding: 0;
-}
-
-#waybar #cava {
-  z-index: 1;
-  pointer-events: none; /* disables its hover/click to allow custom-cava to pass through */
-}
+  z-index: 10;
 
 /*------------------------------------------------------------
  Module grouping overrides
@@ -108,12 +95,6 @@
 }
 
 #waybar .modules-right > widget > #cava,
-#waybar .modules-right > widget > #custom-cava {
-  position: relative;
-  min-width: 120px;
-  height: 100%;
-  border-radius: 0;
-}
 #waybar .modules-right > widget > #pulseaudio {
     border-radius: 0;
 }
