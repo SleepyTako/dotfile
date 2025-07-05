@@ -125,7 +125,7 @@ while true; do
 				echo "Started a text scroll job for artist" 
 				scroll_text "$artist" "$artist_len" "artist" &
 			else
-				artist_parsed=`~/.config/eww/scripts/parse_jp "$artist" "0"`
+				artist_parsed=`~/.config/eww/scripts/parse_jp.py "$artist" "0"`
 				$eww update artist="$artist"
 				$eww update artist_parsed="$artist_parsed"
 			fi;
