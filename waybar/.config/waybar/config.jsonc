@@ -15,7 +15,7 @@
   ],
   "modules-right": [
     "mpris",
-    //"cava",
+    "cava",
     "custom/cava",
     "pulseaudio",
     "backlight",
@@ -96,13 +96,13 @@
   // Audio: Cava (visualizer), Pulseaudio (volume)
   //==================================================================
 
-  //"custom/cava": {
-  //"exec": "echo '󰓃'",
-  //"on-click": "eww open --toggle music",
-  //"interval": 10
-  //},
-
   "custom/cava": {
+  "exec": "echo '󰓃'",
+  "on-click": "eww open --toggle music",
+  "interval": 10
+  },
+
+  "cava": {
     "cava_config": "/home/Squeaks/.config/cava/config",
     "framerate": 240,
     "autosens": 1,
@@ -120,7 +120,7 @@
     "noise_reduction": 0.77,
     "input_delay": 0,
     "format-icons": ["▁","▂","▃","▄","▅","▆","▇","█"],
-    "actions": { "on-click-right": "mode" }
+    //"actions": { "on-click-right": "mode" }
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",
