@@ -57,7 +57,7 @@ scroll_text () {
 	eww_var=$3
 	$eww update $eww_var="$text"
 	while true; do
-		text_parsed=`$HOME/.config/eww/scripts/parse_jp "$text" "$scroll_index"`
+		text_parsed=`$HOME/.config/eww/scripts/parse_jp.py "$text" "$scroll_index"`
 		scroll_index=$(( (scroll_index + 1) % (text_len + 8) )) 
 		$eww update $eww_var\_parsed="$text_parsed"
 		# Change the value below to control how fast text should scroll
@@ -103,7 +103,7 @@ while true; do
 				echo "Started a text scroll job for title" 
 				scroll_text "$title" "$title_len" "title" &
 			else
-				title_parsed=`$HOME/.config/eww/scripts/parse_jp "$title" "0"`
+				title_parsed=`$HOME/.config/eww/scripts/parse_jp.py "$title" "0"`
 				$eww update title="$title"
 				$eww update title_parsed="$title_parsed"
 			fi;
