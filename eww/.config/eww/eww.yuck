@@ -1,45 +1,178 @@
+;; COLORSCHEME
+;; Normal colors (set at launch by scripts/ewwcolorscheme)
+(defvar color0 "#0E1F2F")
+(defvar color1 "#E94546")
+(defvar color2 "#B2856C")
+(defvar color3 "#F1A277")
+(defvar color4 "#027A8D")
+(defvar color5 "#DE5952")
+(defvar color6 "#7fcfec")
+(defvar color7 "#F1966F")
+(defvar color8 "#193855")
+(defvar color9 "#ff4647")
+(defvar color10 "#f9a779")
+(defvar color11 "#ffcb83")
+(defvar color12 "#019fb8")
+(defvar color13 "#ff6156")
+(defvar color14 "#8dffff")
+(defvar color15 "#ffc994")
 
+;; Specials 
+(defvar left_bg "#0E1F2F")
+(defvar center_bg "#0E1F2F")
+(defvar right_bg "#0E1F2F")
+
+
+;; VARS
+(defvar eww "eww -c $HOME/.config/eww/mybar")
+(defvar left_class "win_normal")
+(defvar center_class "win_normal")
+(defvar right_class "win_normal")
+(defvar music_reveal false)
 (defvar cover "images/music.png")
-(defvar title_parsed "No title")
-(defvar artist_parsed "No artist")
+(defvar cpu_reveal false)
+(defvar disk_reveal false)
+(defvar temperature_reveal false)
+(defvar ram_reveal false)
+(defvar date_reveal false)
+(defvar battery_reveal false)
+(defvar media_bar_class "bar_normal")
+(defvar media_bar_is_active false)
+(defvar media_bar_class_popup "bar_normal_popup")
+(defvar media_bar_is_active_popup false)
+(defvar battery_image "images/battery_normal.png")
+(defvar day "0")
+(defvar month "0")
+(defvar year "0")
+(defvar wp0 "●")
+(defvar wp1 "○")
+(defvar wp2 "○")
+(defvar wp3 "○")
+(defvar wp4 "○")
+(defvar layout_button "")
 (defvar media_status "")
-(defvar position 0)
+(defvar artist "No artist")
+(defvar artist_parsed "No artist") 
+(defvar title "No title") 
+(defvar title_parsed "No title") 
 (defvar length 100)
-(defvar progress 0)
-(defvar duration "00:00")
+(defvar position 0) 
+(defvar us_class "kb_button_active") 
+(defvar es_class "kb_button_inactive") 
+(defvar cpu_percent "0.00") 
+(deflisten launch3 "scripts/media_info")
 
-(defpoll media_updater
-  :interval "2s"
-  "scripts/media_info.sh")
+;; Music window
+(defwindow music
+  :geometry
+    (geometry
+      :x "40px"
+      :y "65px"
+      :width "415px"
+      :height "200px")
+    :stacking "fg"
+    :windowtype "dock"
+    :wm-ignore "false"
+    (box
+      :orientation "v"
+      :valign "fill"
+      :halign "fill"
+      :space-evenly "false"
+      :class "music_box_popup"
+      (box
+        :orientation "h"
+        :valign "fill"
+        :halign "fill"
+        :space-evenly "false"
+        (box
+          :valign "center"
+          :halign "start"
+          :height 140
+          :width 140
+          :class "media_art_popup_box"
+          (eventbox
+            :cursor "pointer"
+            (button
+              :onclick "pqiv images/currmedia_fullsize.png&"
+              (image
+                :valign "center"
+                :halign "center"
+                :class "media_art_popup"
+                :tooltip "${title} by ${artist}"
+                :path cover))))
+        (box
+          :valign "center"
+          :halign "fill"
+          :orientation "v"
+          :class "media_data_popup"
+          :spacing 20
+          (label
+            :class "media_title_popup"
+            :markup title_parsed
+            :halign "center")
+          (label
+            :class "media_artist_popup"
+            :markup artist_parsed
+            :halign "center")
+          (box
+            :orientation "h"
+            :halign "fill"
+            :valign "fill"
+            :class "media_buttons_box_popup"
+            (eventbox
+              :cursor "pointer"
+              (button
+                :onclick "scripts/media_control --prev"
+                :class "nextprev_popup"
+                :tooltip "Previous"
+                ""))
+            (eventbox
+              :cursor "pointer"
+              (button
+                :onclick "scripts/media_control --move -5"
+                :class "move_popup"
+                :tooltip "-5 seconds"
+                ""))
+            (eventbox
+              :cursor "pointer"
+              (button
+                :onclick "scripts/media_control --toggle"
+                :class "playpause_popup"
+                :tooltip "Play/Pause"
+                media_status))
+            (eventbox
+              :cursor "pointer"
+              (button
+                :onclick "scripts/media_control --move +5"
+                :class "move_popup"
+                :tooltip "+5 seconds"
+                ""))
+            (eventbox
+              :cursor "pointer"
+              (button
+                :onclick "scripts/media_control --next"
+                :class "nextprev_popup"
+                :tooltip "Next"
+                ""))
+      
+                )))
+      (eventbox
+        :cursor "pointer"
+        :onhover "${eww} update media_bar_class_popup=\"bar_highlighted_popup\" && ${eww} update media_bar_is_active_popup=true"
+        :onhoverlost "${eww} update media_bar_class_popup=\"bar_normal_popup\" && ${eww} update media_bar_is_active_popup=false"
+        (box
+          :active media_bar_is_active_popup
+          :orientation "h"
+          :valign "fill"
+          :halign "fill"
+          :class media_bar_class_popup
+          (scale
+            :min 0
+            :max length
+            :value position
+            :orientation "h"
+            :onchange "scripts/media_control --seek {} ${media_bar_is_active_popup}"
+          )))
+      ))
 
-(defwidget media_player [art title artist duration position progress]
-  (box :class "media-box" :orientation "horizontal" :spacing 10
-    (image :class "media-cover" :path cover :tooltip "${title_parsed} by ${artist_parsed}")
-    (box :orientation "vertical" :spacing 4
-      (label :class "media-title"  :text title_parsed)
-      (label :class "media-artist" :text artist_parsed)
-      (box :orientation "horizontal" :spacing 6
-        (button :onclick "playerctl previous"   :label "⏮")
-        (button :onclick "playerctl play-pause" :label "⏯")
-        (button :onclick "playerctl next"       :label "⏭"))
-      (box :orientation "horizontal" :spacing 6
-        (label :text position)
-        (progress :value progress :max 100 :class "media-progress")
-        (label :text duration)))))
-
-(defwindow media_player
-  :monitor 0
-  :geometry (geometry :x "20px" :y "60px" :width "400px" :height "100px" :anchor "top right")
-  :stacking "fg"
-  :windowtype "dock"
-  :layer "overlay"
-  :exclusive false
-  :focusable false
-  (media_player
-    :art cover
-    :title title_parsed
-    :artist artist_parsed
-    :duration duration
-    :position position
-    :progress progress))
 
