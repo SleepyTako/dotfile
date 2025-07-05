@@ -145,7 +145,7 @@
   :wm-ignore false
   (eventbox
     :cursor "pointer"
-    (box
+    (button
       :onclick "eww open --toggle music"
       (label :text "        ") ;; Invisible space, just for clickable area
     )
