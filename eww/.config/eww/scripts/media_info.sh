@@ -57,7 +57,7 @@ scroll_text () {
 	eww_var=$3
 	$eww update $eww_var="$text"
 	while true; do
-		text_parsed=`$HOME/.config/eww/mybar/scripts/parse_jp "$text" "$scroll_index"`
+		text_parsed=`$HOME/.config/eww/scripts/parse_jp "$text" "$scroll_index"`
 		scroll_index=$(( (scroll_index + 1) % (text_len + 8) )) 
 		$eww update $eww_var\_parsed="$text_parsed"
 		# Change the value below to control how fast text should scroll
@@ -65,9 +65,9 @@ scroll_text () {
 	done
 }
 
-imgdir="$HOME/.config/eww/mybar/images"
+imgdir="$HOME/.config/eww/images"
 lastimg="none"
-eww="eww -c $HOME/.config/eww/mybar"
+eww="eww -c $HOME/.config/eww"
 
 while true; do
 	if [[ ! -z `playerctl status 2> /dev/null` ]]
@@ -103,7 +103,7 @@ while true; do
 				echo "Started a text scroll job for title" 
 				scroll_text "$title" "$title_len" "title" &
 			else
-				title_parsed=`$HOME/.config/eww/mybar/scripts/parse_jp "$title" "0"`
+				title_parsed=`$HOME/.config/eww/scripts/parse_jp "$title" "0"`
 				$eww update title="$title"
 				$eww update title_parsed="$title_parsed"
 			fi;
@@ -125,7 +125,7 @@ while true; do
 				echo "Started a text scroll job for artist" 
 				scroll_text "$artist" "$artist_len" "artist" &
 			else
-				artist_parsed=`$HOME/.config/eww/mybar/scripts/parse_jp "$artist" "0"`
+				artist_parsed=`$HOME/.config/eww/scripts/parse_jp "$artist" "0"`
 				$eww update artist="$artist"
 				$eww update artist_parsed="$artist_parsed"
 			fi;
