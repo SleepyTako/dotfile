@@ -98,7 +98,7 @@
 
   "custom/cava": {
   "exec": "echo '󰓃'",
-  "on-click": "eww open --toggle spotify-popup",
+  "on-click": "eww open --toggle music",
   "interval": 10
   },
 
