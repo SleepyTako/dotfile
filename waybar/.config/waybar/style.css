@@ -98,9 +98,13 @@
 }
 
 #waybar .modules-right > widget > #cava,
-#waybar .modules-right > widget > #custom-cava
 #waybar .modules-right > widget > #pulseaudio {
     border-radius: 0;
+}
+
+#waybar .modules-right > widget > #custom-cava {
+    border-radius: 0;
+    margin-right: 50px;
 }
 
 #waybar .modules-right > widget > #backlight {
