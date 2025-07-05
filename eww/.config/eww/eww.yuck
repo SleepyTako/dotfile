@@ -136,8 +136,8 @@
 (defwindow cava_overlay
   :monitor 0
   :geometry (geometry
-    :x "1250px"     ;; Adjust this to match where #cava shows
-    :y "-30px"        ;; Just below the top bar usually
+    :x "1260px"     ;; Adjust this to match where #cava shows
+    :y "-50px"        ;; Just below the top bar usually
     :width "120px"  ;; Approx width of your Cava module
     :height "30px")
   :stacking "fg"
@@ -146,7 +146,7 @@
   (eventbox
     :cursor "pointer"
     (box
-      :onclick "eww open music"
+      :onclick "eww open --toggle music"
       (label :text "        ") ;; Invisible space, just for clickable area
     )
   )
