@@ -1,165 +1,170 @@
-// EWW.SCSS 
-// GLOBALS
-
+// EWW.SCSS
 @import "colors.scss";
 
-*{
-    all: unset;
-    font-family: "Iosevka Curly";
-    font-weight: 800;
+* {
+  all: unset;
+  font-family: "Iosevka Curly";
+  font-weight: 800;
+  font-size: 13px;
 }
 
 // Music
-.music_box { 
-}
+.music_box {}
+
 .music_box_popup {
-    background-color: $color0;
-    background-image: url("images/background.png");
-    border: solid 5px $color9;
-    border-radius: 0 0 20 20;
-}
-.media_art {
-    border-right: solid 5px $color9;
-    border-left: solid 5px $color9;
-    background-color: $color9;
-    margin-left: 14px;
-    margin-right: 3px;
-    min-width: 40px;
-    min-height: 40px;
-}
-.media_art_popup {
-    border: solid 5px $color14;
-    border-radius: 5px;
-}
-.media_art_popup_box {
-    min-width: 140px;
-    min-height: 140px;
-    margin: 15 0 15 15;
-}
-.media_data { 
-    margin-left: 10px;
-    margin-right: 17px;
-}
-.media_data_popup {
-}
-.media_title {
-    //font-family: "Meiryo";
-    font-size: 16px;
-    color: $color15;
-    margin-bottom: -1px;
-    margin-right: -5000px;
-    margin-left: -5000px;
-    margin-top: 2px;
-}
-.media_title_popup {
-    font-size: 20px;
-    margin-left: 15px;
-    color: $color15;
-}
-.media_artist_popup {
-    font-size: 15px;
-    margin: 0 15 0 10;
-    color: $color12;
-//    background-color: #31225a;
-}
-.media_buttons {
-    font-size: 20px;
-    margin-bottom: 2px;
+  background-color: $color0;
+  background-image: url("images/background.png");
+  border: solid 5px $color9;
+  border-radius: 0 0 20px 20px;
 }
 
-.prev_button, .toggle_button, .next_button {
-    font-size: 20px;
-    min-width: 30px;
-    margin-top: 2px;
-    margin-bottom: -3px;
-//    background-color: #ffffff;
+.media_art {
+  border-right: solid 5px $color9;
+  border-left: solid 5px $color9;
+  background-color: $color9;
+  margin-left: 14px;
+  margin-right: 3px;
+  min-width: 40px;
+  min-height: 40px;
+}
+
+.media_art_popup {
+  border: solid 5px $color14;
+  border-radius: 5px;
+}
+
+.media_art_popup_box {
+  min-width: 140px;
+  min-height: 140px;
+  margin: 15px 0 15px 15px;
+}
+
+.media_data {
+  margin-left: 10px;
+  margin-right: 17px;
+}
+
+.media_data_popup {}
+
+.media_title_popup {
+  font-size: 17px;
+  margin-left: 10px;
+  color: $color15;
+}
+
+.media_artist_popup {
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0 10px 0 10px;
+  color: $color12;
+}
+
+.media_buttons_box_popup {
+  margin-top: 5px;
+}
+
+.media_buttons_box_popup button {
+  font-size: 24px;
+  margin: 0 6px;
+  padding: 4px;
+  background: transparent;
+  border: none;
+  transition: transform 0.2s ease;
+}
+
+.media_buttons_box_popup button:hover {
+  transform: scale(1.15);
+  color: lighten($color13, 10%);
 }
 
 .playpause_popup {
-    font-size: 30px;
-    margin-right: 10px;
-    margin-left: 10px;
-    color: $color12;
+  font-size: 24px;
+  margin: 0 10px;
+  color: $color12;
 }
+
 .move_popup {
-    font-size: 30px;
-    margin-right: 10px;
-    margin-left: 10px;
-    color: $color15;
+  font-size: 24px;
+  margin: 0 10px;
+  color: $color15;
 }
+
 .nextprev_popup {
-    font-size: 30px;
-    margin-right: 10px;
-    margin-left: 10px;
-    color: $color13;
+  font-size: 24px;
+  margin: 0 10px;
+  color: $color13;
 }
-.media_buttons_box_popup {
-    
-}
-.toggle_button {
-    margin-left: 15px;
-    margin-right: 15px;
-}
+
+// Progress bar styles
 .bar_normal_popup scale trough highlight {
-    all: unset;
-    background-color: $color13;
-    border-radius: 15px;
+  all: unset;
+  background-color: $color13;
+  border-radius: 15px;
 }
+
 .bar_normal_popup scale trough {
-    all: unset;
-    background-color: rgba($color15, 0.4);
-    min-height: 15px;
-    margin: 0 15 15 15;
-    border-radius: 15px;
-    border: solid 5px $color14;
+  all: unset;
+  background-color: rgba($color15, 0.4);
+  min-height: 15px;
+  margin: 0 15px 15px 15px;
+  border-radius: 15px;
+  border: solid 5px $color14;
 }
+
 .bar_highlighted_popup scale trough highlight {
-    all: unset;
-    background-color: $color15;
-    border-radius: 15px;
+  all: unset;
+  background-color: $color15;
+  border-radius: 15px;
 }
+
 .bar_highlighted_popup scale trough {
-    all: unset;
-    background-color: rgba($color15, 0.4);
-    min-height: 15px;
-    margin: 0 15 15 15;
-    border-radius: 15px;
-    border: solid 5px $color14;
+  all: unset;
+  background-color: rgba($color15, 0.4);
+  min-height: 15px;
+  margin: 0 15px 15px 15px;
+  border-radius: 15px;
+  border: solid 5px $color14;
 }
+
 .bar_normal {
-    margin-top: -6px;
-    margin-bottom: -20px;
+  margin-top: -6px;
+  margin-bottom: -20px;
 }
+
 .bar_normal scale trough highlight {
-    all: unset;
-    background-color: $color12;
-    border-radius: 10px;
+  all: unset;
+  background-color: $color12;
+  border-radius: 10px;
 }
+
 .bar_normal scale trough {
-    all: unset;
-    background-color: rgba($color15, 0.4);
-    min-width: 173px;
-    min-height: 10px;
-    border-radius: 10px;
+  all: unset;
+  background-color: rgba($color15, 0.4);
+  min-width: 173px;
+  min-height: 10px;
+  border-radius: 10px;
 }
+
 .bar_highlighted {
-    margin-top: -6px;
-    margin-bottom: -20px;
+  margin-top: -6px;
+  margin-bottom: -20px;
 }
+
 .bar_highlighted scale trough highlight {
-    all: unset;
-    background-color: $color15;
-    border-radius: 10px;
+  all: unset;
+  background-color: $color15;
+  border-radius: 10px;
 }
+
 .bar_highlighted scale trough {
-    all: unset;
-    background-color: rgba($color15, 0.4);
-    min-width: 173px;
-    min-height: 10px;
-    border-radius: 10px;
+  all: unset;
+  background-color: rgba($color15, 0.4);
+  min-width: 173px;
+  min-height: 10px;
+  border-radius: 10px;
 }
 
-
+// Cava overlay click-through
 .cava_overlay {
   background-color: transparent;
   color: transparent;
