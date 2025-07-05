@@ -104,7 +104,7 @@
 
 #waybar .modules-right > widget > #custom-cava {
     border-radius: 0;
-    margin-right: 50px;
+    padding-right: 50px;
 }
 
 #waybar .modules-right > widget > #backlight {
